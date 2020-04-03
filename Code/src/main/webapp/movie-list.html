@@ -1,100 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" -->
-          <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <title>Album example for Bootstrap</title>
 
-    <title>Movie List</title>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="./js/movie-list.js"> </script>
+    <!-- include jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"/>
+    <!-- hotkey plugin-->
+
+    <script src="js/jquery.hotkeys.js"></script>
+
+    <script src="libs/builder/builder.js"></script>
+    <script src="libs/builder/undo.js"></script>
+
+    <script src="libs/builder/inputs.js"></script>
+
+    <script src="libs/builder/components-bootstrap4.js"></script>
+    <script src="libs/builder/components-widgets.js"></script>
+
+
+    <!-- autocomplete plugin used by autocomplete input-->
+    <script src="libs/autocomplete/jquery.autocomplete.js"></script>
+
 </head>
+
 <body>
 
+<header>
+    <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>Fabflix</strong>
+        </a>
+        <form id = "searchAndBrowser" method="POST" style="float: left">
+            <input type="text" name="search" placeholder="Type the movie..." />
+            <select name = "browse" id="genresSelect">
+                <option>Default</option>
+            </select>
+            <input type="submit" value="go" id="go"/>
+        </form>
+    </div>
 
-<h1>MovieList</h1>
-<div style="text-align: center;">
-    <i class="material-icons">search</i>
-    <form id = "searchAndBrowser" method="POST">
-      <input type="text" name="search" />
-      <select name = "browse" id="genresSelect">
-        <option>Default</option>
-      </select>
-      <input type="submit" value = "go" id = "go"></input>
-    </form>
-    
+</header>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="348" height="225" viewBox="0 0 348 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg></body><div class="container">
+
+
+    <!-- Page Heading -->
+    <h1 class="my-4"><b><i>Movie List</i></b></h1>
+    <div id = "movie-list-body">
+    </div>
 </div>
-<div class="container">
-    <!-- Id "star_table" is useful for jQuery to find the html element with id, class here is mapping to Bootstrap defined class CSS -->
-    <table id="movie_list_table" class="table table-hover table-fluid">
-        <!-- Create a table header -->
-        <thead>
-        <tr>
-            <!-- Titles of each column-->
-            <th>title</th>
-            <th>year</th>
-            <th>director</th>
-            <th>genres</th>
-            <th>stars</th>
-            <th>popularity</th>
-        </tr>
-        </thead>
-        <!-- Table body is left empty here, will be populated with the data retrieved with index.js -->
-        <!-- Again, id "star_table_body" is useful for jQuery to find this html element -->
-        <tbody id=movie_list_table_body>
-        <tr>
-            <th>test 1</th>
-            <th>test 2</th>
-            <th>test 3</th>
-            <th>test 4</th>
-            <th>test 5</th>
-            <th>test 6</th>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<!-- Load jQuery and Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
-crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
-integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
-crossorigin="anonymous"></script>
-
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-
-<!-- <script src="https://maxscdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-
-<script src="js/movie-list.js"></script>
-
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-
-<link rel="stylesheet" 
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
-crossorigin="anonymous">
-
-<link rel="stylesheet" 
-href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
-
-<link res="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="./css/style.css">
-
-<!-- Load our own JS file -->
-
-<!-- The path is relative to index.html, since these two files are in the same directory -->
-<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
-     otherwise the url is relative to the root path-->
-</body>
 </html>

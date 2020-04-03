@@ -39,7 +39,7 @@ function getParameterByName(target) {
 /**
  jsonObject.addProperty("star_id", starId);
  jsonObject.addProperty("star_name", starName);
- jsonObject.addProperty("star_dob", starDob);
+ jsonObject.addProperty("star_birth", starDob);
  jsonObject.addProperty("movie_id", movieId);
  jsonObject.addProperty("movie_title", movieTitle);
  jsonObject.addProperty("movie_year", movieYear);
@@ -60,33 +60,38 @@ function handleResult(resultData) {
 
     // Populate the star table
     // Find the empty table body by id "movie_table_body"
-    let movieTableBodyElement = jQuery("#movie_table_body");
+    let movieTableBodyElement = jQuery("#single-movie-body");
 
     // Concatenate the html tags with resultData jsonObject to create table rows
     for (let i = 0; i < resultData.length; i++) {
         let rowHTML = "";
-        rowHTML += "<tr>";
-        rowHTML +="<th>" +
-            // Add a link to single-star.html with id passed with GET url parameter
-            '<a href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
+        rowHTML+="<div class='row'>";
+        rowHTML+="<div class=\"col-md-6\">";
+        rowHTML+='<h1><a href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
             + resultData[i]["movie_title"] +     // display star_name for the link text
-            '</a>' +
-            "</th>";
-        rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
-        rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
-        rowHTML += "<th>" + resultData[i]["genre"] + "</th>";
-        rowHTML += "<th>" +
-            // Add a link to single-star.html with id passed with GET url parameter
-            '<a href="/backendCode/single-star.html?id=' + resultData[i]['star_id'] + '">'
-            + resultData[i]["star_name"] +     // display star_name for the link text
-            '</a>' +
-            "</th>";
-        rowHTML += "<th>" + resultData[i]["rating"] + "</th>";
-        rowHTML += "</tr>";
+            '</a></h1>';
+        // start to add list of stars
+        let index = i;
+        let movie_title = resultData[i]["movie_title"];
+        while (index < resultData.length && resultData[index]["movie_title"] === movie_title) {
 
+            rowHTML+='<div><a href="/backendCode/single-star.html?id=' + resultData[index]['star_id'] + '">'
+                + resultData[index]["star_name"] +     // display star_name for the link text
+                '</a></div>';
+            index++;
+        }
+        rowHTML+="</div>";
+        rowHTML+="<div class=\"col-md-5\">";
+        rowHTML += "<h1>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h1>";
+        rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
+
+        rowHTML+="<button class=\"btn btn-primary\" href=\"#\">Add To Cart</button>";
+        rowHTML+="</div>";
+        rowHTML+="</div>";
+        rowHTML+="<hr>";
         // Append the row created to the table body, which will refresh the page
         movieTableBodyElement.append(rowHTML);
-
+        i = index;
     }
 }
 

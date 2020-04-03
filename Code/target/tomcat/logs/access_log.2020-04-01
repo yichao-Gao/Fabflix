@@ -1,6 +1,0 @@
-0:0:0:0:0:0:0:1 - - [01/Apr/2020:23:48:21 -0700] "GET /backendCode/movie-list.html HTTP/1.1" 304 - http-bio-8080-exec-1 25
-0:0:0:0:0:0:0:1 - - [01/Apr/2020:23:48:21 -0700] "GET /backendCode/api/getGenres HTTP/1.1" 200 457 http-bio-8080-exec-2 233
-0:0:0:0:0:0:0:1 - - [01/Apr/2020:23:48:21 -0700] "GET /backendCode/api/movie HTTP/1.1" 200 38562 http-bio-8080-exec-3 241
-0:0:0:0:0:0:0:1 - - [01/Apr/2020:23:48:30 -0700] "POST /backendCode/api/login HTTP/1.1" 200 40 http-bio-8080-exec-5 6
-0:0:0:0:0:0:0:1 - - [01/Apr/2020:23:48:30 -0700] "GET /backendCode/api/getGenres HTTP/1.1" 200 457 http-bio-8080-exec-4 6
-0:0:0:0:0:0:0:1 - - [01/Apr/2020:23:48:30 -0700] "GET /backendCode/api/movie HTTP/1.1" 200 38562 http-bio-8080-exec-6 12

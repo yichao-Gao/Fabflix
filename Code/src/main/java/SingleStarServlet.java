@@ -28,7 +28,7 @@ public class SingleStarServlet extends HttpServlet {
         // Retrieve parameter id from url request.
         String id = request.getParameter("id");
         try {
-            String query = "SELECT * from stars as s, stars_in_movies as sim, movies as m where m.id = sim.movieId and sim.starId = s.id and " +
+            String query = "SELECT * from stars as s, stars_in_movies as sim, movies as m, ratings as r where m.id = sim.movieId and sim.starId = s.id and m.id=r.movieId and " +
                     "s.id = ?";
             // Declare our statement
             PreparedStatement statement = DBconnection.getdBconnection().prepareStatement(query);
@@ -50,17 +50,18 @@ public class SingleStarServlet extends HttpServlet {
                 String movieTitle = rs.getString("title");
                 String movieYear = rs.getString("year");
                 String movieDirector = rs.getString("director");
-
+                String movieRating = rs.getString("rating");
                 // Create a JsonObject based on the data we retrieve from rs
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("star_id", starId);
                 jsonObject.addProperty("star_name", starName);
-                jsonObject.addProperty("star_dob", starDob);
+                jsonObject.addProperty("star_birth", starDob);
                 jsonObject.addProperty("movie_id", movieId);
                 jsonObject.addProperty("movie_title", movieTitle);
                 jsonObject.addProperty("movie_year", movieYear);
                 jsonObject.addProperty("movie_director", movieDirector);
+                jsonObject.addProperty("movie_rating", movieRating);
 
                 jsonArray.add(jsonObject);
             }

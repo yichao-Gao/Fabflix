@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
          */
 
         try {
-            if (email.equals("1") && password.equals("1")) {
+            if (email.equals("mengz9@uci.edu") && password.equals("123456")) {
                 // Login succeeds
                 // Set this user into current session
 

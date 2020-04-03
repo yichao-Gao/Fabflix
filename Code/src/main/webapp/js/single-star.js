@@ -53,22 +53,32 @@ function handleResult(resultData) {
 
     // Populate the star table
     // Find the empty table body by id "movie_table_body"
-    let movieTableBodyElement = jQuery("#star_table_body");
+    let movieTableBodyElement = jQuery("#single-star-body");
 
     // Concatenate the html tags with resultData jsonObject to create table rows
     for (let i = 0; i < Math.min(10, resultData.length); i++) {
         let rowHTML = "";
-        rowHTML += "<tr>";
-        rowHTML +="<th>" +
-            // Add a link to single-star.html with id passed with GET url parameter
-            '<a href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
-            + resultData[i]["movie_title"] +     // display star_name for the link text
-            '</a>' +
-            "</th>";
-        rowHTML += "<th>" + resultData[i]["movie_year"] + "</th>";
-        rowHTML += "<th>" + resultData[i]["movie_director"] + "</th>";
-        rowHTML += "</tr>";
+        rowHTML+="<div class='row'>";
+            rowHTML+="<div class=\"col-md-6\">";
+                rowHTML+='<h1><a href="/backendCode/single-star.html?id=' + resultData[i]['star_id'] + '">'
+                    + resultData[i]["star_name"] +     // display star_name for the link text
+                    '</a></h1>';
+            // start to add list of stars
+            if (resultData[i]["star_birth"]===null) {
+                rowHTML+="<h3>"+"Secret"+"</h3>";
+            } else {
+                rowHTML+="<h3>"+resultData[i]["star_birth"]+"</h3>";
+            }
 
+            rowHTML+="</div>";
+            rowHTML+="<div class=\"col-md-5\">";
+                rowHTML += "<h1>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h1>";
+                rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
+
+                rowHTML+="<button class=\"btn btn-primary\" href=\"#\">Add To Cart</button>";
+            rowHTML+="</div>";
+        rowHTML+="</div>";
+        rowHTML+="<hr>";
         // Append the row created to the table body, which will refresh the page
         movieTableBodyElement.append(rowHTML);
     }
