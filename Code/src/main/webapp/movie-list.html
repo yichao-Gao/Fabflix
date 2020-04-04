@@ -12,7 +12,7 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
 
-    <script src="./js/movie-list.js"> </script>
+
     <!-- include jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -54,10 +54,17 @@
             <select name = "browse" id="genresSelect">
                 <option>Default</option>
             </select>
+            <select name = "sortBy" id="sortByType">
+                <option>Sort By</option>
+                <option>Default</option>
+                <option>Rating Up</option>
+                <option>Rating Down</option>
+                <option>Title Up</option>
+                <option>Title Down</option>
+            </select>
             <input type="submit" value="go" id="go"/>
         </form>
     </div>
-
 </header>
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -70,6 +77,15 @@
     <h1 class="my-4"><b><i>Movie List</i></b></h1>
     <div id = "movie-list-body">
     </div>
+    <div>
+        <button class="btn" id="spanFirst">First Page</button> 
+        <button class="btn" onclick="spanPreFunc()" id="spanPre">Previous</button> 
+        <button class="btn" onclick="spanNextFunc()" id="spanNext">Next</button> 
+        <button class="btn" id="spanLast">Last Page</button> 
+        Page <span> </span>
+        <button class="btn" id="spanTotalPage"></button>
+    </div>
 </div>
-
+<script src="./js/movie-list.js"> </script>
+<script src="./js/cart.js"></script>
 </html>

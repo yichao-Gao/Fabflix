@@ -28,15 +28,16 @@ public class IndexServlet extends HttpServlet {
 
         String search = request.getParameter("search");
         String browse = request.getParameter("browse");
-        System.out.println(search.length() + ":" + browse);
-        int topMovieNum = 20;
+        String sort = request.getParameter("sortBy");
+
+        System.out.println(sort);
         // write all the data into the jsonObject
         // response.getWriter().write(responseJsonObject.toString());
         String query = "SELECT m.id as movieId, m.title as movieTitle, m.year as movieYear, m.director as movieDirector, " +
         "g.name as genres, s.id as starId, s.name as starName, r.rating as rating " +
         "from stars as s, stars_in_movies as sim, movies as m, " +
         "genres as g, genres_in_movies as gim, " +
-        "(select * from ratings order by rating DESC) as r " +
+        "(select * from ratings) as r " +
         "where m.id = sim.movieId " +
         "and sim.starId = s.id " +
         "and m.id = gim.movieId " +
@@ -44,17 +45,36 @@ public class IndexServlet extends HttpServlet {
         "and r.movieId = m.id ";
         
         String updateQuery = "select * from ("+query + ") t where";
-        if (search.length() !=0 && search.length() != 0 && !browse.equals("Default")) {
+        if (search.length() !=0 && !browse.equals("Default")) {
             updateQuery += " t.movieTitle like '%"+search+"%' ";
             updateQuery += " and t.genres='"+browse+"' ";
         } else if (search.length() == 0 && !browse.equals("Default")) {
             updateQuery += " t.genres='"+browse+"' ";
+        } else if (search.length() != 0 && browse.equals("Default")){
+            updateQuery += " t.movieTitle like '%"+search+"%' ";
         } else {
             updateQuery = query;
         }
 
-        updateQuery += " limit "+topMovieNum;
-        System.out.println(updateQuery);
+        switch(sort) {
+            case "Rating Up":
+                updateQuery += " order by rating DESC ";
+                break;
+            case "Rating Down":
+                updateQuery += " order by rating ";
+                break;
+            case "Title Up":
+                updateQuery += " order by movieTitle DESC ";
+                break;
+            case "Title Down":
+                updateQuery += " order by movieTitle ";
+                break;
+            default:
+                break;
+        }
+
+        System.out.println();
+        System.out.println("update Query: "+updateQuery);
 
         PrintWriter out = response.getWriter();
         // Declare our statement

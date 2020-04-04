@@ -7,8 +7,9 @@
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
-    <script src="./js/log-in.js"></script>
-    <script src="./js/movie-list.js"> </script>
+
+
+
     <!-- include jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -18,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- hotkey plugin-->
 
     <script src="js/jquery.hotkeys.js"></script>
@@ -34,6 +35,7 @@
 
     <!-- autocomplete plugin used by autocomplete input-->
     <script src="libs/autocomplete/jquery.autocomplete.js"></script>
+
 </head>
 <body>
     <body>
@@ -70,24 +72,24 @@
               <div class="row">
                 <div class="col-md-9 col-lg-8 mx-auto">
                   <h3 class="login-heading mb-8">Welcome to Fabflix!</h3>
-                  <form id="login">
+
+                  <form id="loginForm">
                       
                     <div class="form-label-group">
-                        <input id="inputUser"  placeholder="User name" required="" autofocus="">
+                        <input id="inputUser"  name = "username" placeholder="User name" required="" autofocus="">
                         <label for="inputUser">User name</label>
                     </div>
 
                     <div class="form-label-group">
-                      <input type="email" id="inputEmail" placeholder="Email address" required="" autofocus="">
+                      <input type="email" id="inputEmail" name="email" placeholder="Email address" required="" autofocus="">
                       <label for="inputEmail">Email address</label>
                     </div>
     
                     <div class="form-label-group">
-                      <input type="password" id="inputPassword"  placeholder="Password" required="">
+                      <input type="password" id="inputPassword"  name="password" placeholder="Password" required="">
                       <label for="inputPassword">Password</label>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
-
+                    <input class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value = "sign-in" type="submit"/>
                   </form>
                 </div>
               </div>
@@ -125,7 +127,7 @@
     
     .form-label-group>input,
     .form-label-group>label {
-      padding: var(--input-padding-y) var(--input-padding-x);
+      /*padding: var(--input-padding-y) var(--input-padding-x);*/
       height: auto;
       border-radius: 2rem;
     }
@@ -166,18 +168,19 @@
       color: transparent;
     }
     
-    .form-label-group input:not(:placeholder-shown) {
-      padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
-      padding-bottom: calc(var(--input-padding-y) / 3);
-    }
+    /*.form-label-group input:not(:placeholder-shown) {*/
+    /*  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));*/
+    /*  padding-bottom: calc(var(--input-padding-y) / 3);*/
+    /*}*/
     
-    .form-label-group input:not(:placeholder-shown)~label {
-      padding-top: calc(var(--input-padding-y) / 3);
-      padding-bottom: calc(var(--input-padding-y) / 3);
-      font-size: 12px;
-      color: #777;
-    }
-    </style>  
+    /*.form-label-group input:not(:placeholder-shown)~label {*/
+    /*  padding-top: calc(var(--input-padding-y) / 3);*/
+    /*  padding-bottom: calc(var(--input-padding-y) / 3);*/
+    /*  font-size: 12px;*/
+    /*  color: #777;*/
+    /*}*/
+    </style>
+    <script src="./js/log-in.js"></script>
     </div>
 </body>
 </html>

@@ -2,33 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="605df704-a9db-4c4a-9fa3-943db8e011fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/backendCode_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/backendCode_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IndexServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SingleStarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SingleStarServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/log-in.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/log-in.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/log-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/log-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/log-in.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/movie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/single-movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/single-movie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/single-star.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/single-star.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IndexServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SingleStarServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SingleStarServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-04-01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/backendCode/SESSIONS.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MovieServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MovieServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-04-02" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -44,7 +64,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,7 +81,11 @@
       <option name="presentableId" value="Default" />
       <updated>1585861465295</updated>
       <workItem from="1585861466647" duration="572000" />
-      <workItem from="1585869340176" duration="6250000" />
+      <workItem from="1585869340176" duration="8692000" />
+      <workItem from="1585934918549" duration="2785000" />
+      <workItem from="1585954349832" duration="187000" />
+      <workItem from="1585976893733" duration="20000" />
+      <workItem from="1585976923922" duration="3980000" />
     </task>
     <servers />
   </component>
@@ -65,9 +93,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="679" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1585870476527">
-      <screen x="0" y="23" width="1792" height="1020" />
+    <state x="634" y="333" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585978505293">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="634" y="333" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585978505293" />
+    <state x="709" y="276" key="#com.intellij.ide.util.MemberChooser" timestamp="1585977959483">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="709" y="276" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1585977959483" />
+    <state x="745" y="456" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585954368900">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="745" y="456" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585954368900" />
+    <state x="384" y="141" key="SettingsEditor" timestamp="1585954526353">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1585954526353" />
+    <state x="573" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1585976893826">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585976893826" />
+    <state x="679" y="251" width="670" height="679" key="search.everywhere.popup" timestamp="1585953766975">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
     <state x="679" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1792.1020@0.23.1792.1020" timestamp="1585870476527" />
+    <state x="679" y="251" width="670" height="679" key="search.everywhere.popup/0.23.1792.1024@0.23.1792.1024" timestamp="1585953766975" />
   </component>
 </project>

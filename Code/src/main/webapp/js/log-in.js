@@ -1,9 +1,9 @@
 
-$("#login").submit(function(e) {
-
+$("#loginForm").submit(function(e) {
+    console.log("hi");
     e.preventDefault(); // avoid to execute the actual submit of the form.
 
-    var form = $(this);
+    const form = $(this);
     console.log(form);
     $.ajax({
            type: "POST",

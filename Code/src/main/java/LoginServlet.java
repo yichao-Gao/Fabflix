@@ -33,16 +33,15 @@ public class LoginServlet extends HttpServlet {
          * This example only allows username/password to be anteater/123456
          * In real world projects, you should talk to the database to verify username/password
          */
-
+        
         try {
             if (email.equals("mengz9@uci.edu") && password.equals("123456")) {
                 // Login succeeds
                 // Set this user into current session
-
+                System.out.println("Successfully log in !");
                 String sessionId = ((HttpServletRequest) request).getSession().getId();
                 Long lastAccessTime = ((HttpServletRequest) request).getSession().getLastAccessedTime();
                 request.getSession().setAttribute("user", new User(username, email, password));
-
                 JsonObject responseJsonObject = new JsonObject();
                 responseJsonObject.addProperty("status", "success");
                 responseJsonObject.addProperty("message", "success");
@@ -68,7 +67,6 @@ public class LoginServlet extends HttpServlet {
             response.getWriter().write(jsonObject.toString());
             response.setStatus(500);
             response.getWriter().close();
-            
         }
     }
 }

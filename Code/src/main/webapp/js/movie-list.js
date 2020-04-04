@@ -1,4 +1,31 @@
-function createTable(resultData) {
+numberOfRows = 0;
+numberOfPages = 0;
+numberOfRowPerPage = 10;
+curPage = 1;
+globalResultData = "";
+function initializePage(resultData) {
+    globalResultData = resultData;
+    numberOfRows = globalResultData.length;
+    if (numberOfRows % numberOfRowPerPage == 0) numberOfPages = numberOfRows % numberOfRowPerPage;
+    else numberOfPages = parseInt(numberOfRows / numberOfRowPerPage + 1);
+}
+
+function spanPreFunc() {
+    if (curPage > 1) {
+        curPage--;
+        createTable(globalResultData, curPage)
+    }
+}
+
+function spanNextFunc() {
+    if (curPage < numberOfPages) {
+        curPage++;
+        createTable(globalResultData, curPage);
+    }
+}
+function createTable(resultData, curPage) {
+    let movieTableBodyElementId = document.getElementById("movie-list-body");
+    movieTableBodyElementId.innerHTML = "";
     console.log("handleStarResult: populating movie list table from resultData");
     /** Example
      movie_id: "tt0395642"
@@ -13,12 +40,15 @@ function createTable(resultData) {
     // Populate the star table
     // Find the empty table body by id "star_table_body"
     let movieTableBodyElement = jQuery("#movie-list-body");
+    let startIndex = numberOfRowPerPage * (curPage - 1);
+    let endIndex = numberOfRowPerPage + numberOfRowPerPage * (curPage - 1);
     // Iterate through resultData, no more than 10 entries
-    for (let i = 0; i <resultData.length; i++) {
+    for (let i = startIndex; i < resultData.length; i++) {
+        let movieId = resultData[i]['movie_id'];
         let rowHTML = "";
         rowHTML+="<div class='row'>";
             rowHTML+="<div class=\"col-md-6\">";
-                rowHTML+='<h1><a href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
+                rowHTML+='<h1><a id='+movieId+' href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
                     + resultData[i]["movie_title"] +     // display star_name for the link text
                     '</a></h1>';
                 // start to add list of stars
@@ -45,12 +75,13 @@ function createTable(resultData) {
                     }
                     i++;
                 }
-                rowHTML+="<button class=\"btn btn-primary\" href=\"#\">Add To Cart</button>";
+                rowHTML+="<button id='btn_"+movieId+"' class=\"btn btn-primary\" onclick='checkoutBtn(this)' href=\"#\">Add To Cart</button>";
             rowHTML+="</div>";
         rowHTML+="</div>";
         rowHTML+="<hr>";
         // Append the row created to the table body, which will refresh the page
         movieTableBodyElement.append(rowHTML);
+        if (--endIndex === 0) break;
     }
 }
 
@@ -67,14 +98,13 @@ function createGenres(resultData) {
 }
 
 function updateTable(resultData) {
-    let movieTableBodyElement = document.getElementById("movie_list_table_body");
-    movieTableBodyElement.innerHTML = "";
-    createTable(resultData);
+    
+    createTable(resultData, 1);
 }
 
 /** listening to the search and browse function */
 $("#searchAndBrowser").submit(function(e) {
-    e.preventDefault(); // avoid to execute the actual submit of the form.
+    e.preventDefault(); // avoid to execute the actual submit of the form.s
 
     let form = $(this);
     console.log(form);
@@ -94,7 +124,10 @@ $.ajax({
     url: '/backendCode/api/movie',
     type: 'GET',
     dataType: 'json',
-    success: (resultData) => createTable(resultData),
+    success: (resultData) => {
+        initializePage(resultData);
+        createTable(globalResultData, curPage);
+    },
     error: (error) => {console.log(error)}
 });
 

@@ -26,7 +26,7 @@ public class MovieServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("application/json");
-        int topMovieNum = 20;
+
         // Retrieve parameter id from url request.
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
@@ -36,7 +36,7 @@ public class MovieServlet extends HttpServlet {
                     "g.name as genres, s.id as starId, s.name as starName, r.rating as rating " +
                     "from stars as s, stars_in_movies as sim, movies as m, " +
                     "genres as g, genres_in_movies as gim, " +
-                    "(select * from ratings order by rating DESC limit "+topMovieNum+") as r " +
+                    "(select * from ratings order by rating DESC) as r " +
                     "where m.id = sim.movieId " +
                     "and sim.starId = s.id " +
                     "and m.id = gim.movieId " +
