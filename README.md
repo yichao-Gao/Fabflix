@@ -19,6 +19,12 @@ Netflix-like E-commerce website for buying movie
 
 ## Demonstration
 
+![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/login.png)
+
+![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/Loader.png)
+
+![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/MovieList.png)
+
 
 ## Next Step
 
