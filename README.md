@@ -25,10 +25,10 @@ The following **required** functionality is complete:
   
 ## How to start
 * Git clone the code into the desktop using `Git clone https://github.com/SimonZhou96/FabflixHome.git`.
-* Go to the root folder, and type `maven clean install` to install the maven-tomcat-plugin package.
-* Find the backendCode.war file in the path `your path/main/java/target`, copy it.
-* Log on the `localhost:8080`, start with the manager permission, deploy the war file in the `tomcat/wepapps`.
-* Type the url `localhost:8080/backendCode` to start the application.
+* If you are using Intellij, just open Intellij, Click on `import project`, choose the root path of the projects you just cloned, and click on `next` all the way down.
+* Go to the root folder which contains the `pom.xml`, and type `maven clean install` to install the maven-tomcat package.
+* To run the application, type `mvn tomcat7:run`, and then open your favorite browser, type `localhost:8080/backendCode`
+* Then the project will start
 
 ## Demonstration
 
