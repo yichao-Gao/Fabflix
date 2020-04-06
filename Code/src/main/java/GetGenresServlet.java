@@ -25,7 +25,7 @@ public class GetGenresServlet extends HttpServlet {
         String query = "select distinct name from genres";
         PrintWriter out = response.getWriter();
         try {
-            Connection connection = DBconnection.getdBconnection();
+            Connection connection = DBconnection.getDBconnection();
             // Declare our statement
             PreparedStatement statement = connection.prepareStatement(query);
 

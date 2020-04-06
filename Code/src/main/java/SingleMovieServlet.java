@@ -31,7 +31,7 @@ public class SingleMovieServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             // Get a connection from dataSource
-            Connection dbcon = DBconnection.getdBconnection();
+            Connection dbcon = DBconnection.getDBconnection();
 
             // Construct a query with parameter represented by "?"
             String query = "SELECT m.id as movieId, m.title as movieTitle, m.year as movieYear, m.director as movieDirector, " +

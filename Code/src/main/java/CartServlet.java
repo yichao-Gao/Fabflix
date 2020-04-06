@@ -16,14 +16,15 @@ public class CartServlet extends HttpServlet {
 
         String movieId = request.getParameter("id");
         movieId = movieId.split("_")[1];
-
         PrintWriter out = response.getWriter();
         try {
-            if (request.getSession().getAttribute("cart") == null) {
+            if (request.getSession().getAttribute("user") != null) {
                 Cart cart = new Cart();
                 request.getSession().setAttribute("cart", cart);
+            } else {
+                System.out.println("the user hasn't been logged in!");
             }
-            Cart cart = (Cart) request.getSession().getAttribute("cart");
+            Cart cart = ((User) request.getSession().getAttribute("user")).getCart();
             cart.movieQuantity.putIfAbsent(movieId, cart.movieQuantity.getOrDefault(movieId, 0) + 1);
             response.setStatus(200);
         } catch (Exception e) {

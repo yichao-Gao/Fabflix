@@ -31,7 +31,7 @@ public class SingleStarServlet extends HttpServlet {
             String query = "SELECT * from stars as s, stars_in_movies as sim, movies as m, ratings as r where m.id = sim.movieId and sim.starId = s.id and m.id=r.movieId and " +
                     "s.id = ?";
             // Declare our statement
-            PreparedStatement statement = DBconnection.getdBconnection().prepareStatement(query);
+            PreparedStatement statement = DBconnection.getDBconnection().prepareStatement(query);
             // Set the parameter represented by "?" in the query to the id we get from url,
             // num 1 indicates the first "?" in the query
             statement.setString(1, id);

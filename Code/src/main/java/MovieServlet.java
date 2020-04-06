@@ -2,6 +2,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import javax.annotation.Resource;
+import javax.naming.Context;
+import javax.naming.InitialContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +21,6 @@ import java.sql.ResultSet;
 public class MovieServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    @Resource(name = "jdbc/moviedb")
     private DataSource dataSource;
 
     @Override
@@ -41,9 +42,9 @@ public class MovieServlet extends HttpServlet {
                     "and sim.starId = s.id " +
                     "and m.id = gim.movieId " +
                     "and gim.genreId = g.id " +
-                    "and r.movieId = m.id ";
+                    "and r.movieId = m.id limit 100";
 
-            Connection connection = DBconnection.getdBconnection();
+            Connection connection = DBconnection.getDBconnection();
             // Declare our statement
             PreparedStatement statement = connection.prepareStatement(query);
 

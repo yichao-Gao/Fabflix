@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(filterName = "LoginFilter", urlPatterns = "/api/testNotIn")
+@WebFilter(filterName = "LoginFilter", urlPatterns = "/*")
 public class LoginFilter implements Filter {
 /**
      * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
@@ -16,10 +16,8 @@ public class LoginFilter implements Filter {
         // Check if the URL is allowed to be accessed without log in
         if (this.isUrlAllowedWithoutLogin(httpRequest.getRequestURI())) {
             System.out.println("LoginFilter: " + httpRequest.getRequestURI());
-            System.out.println("URL type: " + httpRequest.getMethod());
             // Keep default action: pass along the filter chain
             chain.doFilter(request, response);
-            System.out.println("response = " + response);
             return;
         }
 

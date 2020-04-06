@@ -30,7 +30,6 @@ public class IndexServlet extends HttpServlet {
         String browse = request.getParameter("browse");
         String sort = request.getParameter("sortBy");
 
-        System.out.println(sort);
         // write all the data into the jsonObject
         // response.getWriter().write(responseJsonObject.toString());
         String query = "SELECT m.id as movieId, m.title as movieTitle, m.year as movieYear, m.director as movieDirector, " +
@@ -79,7 +78,7 @@ public class IndexServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         // Declare our statement
         try {
-            Connection connection = DBconnection.getdBconnection();
+            Connection connection = DBconnection.getDBconnection();
             // Declare our statement
             PreparedStatement statement = connection.prepareStatement(updateQuery);
 
