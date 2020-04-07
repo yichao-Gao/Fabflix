@@ -44,11 +44,48 @@
             <strong>Fabflix</strong>
         </a>
 
-        <button>Proceed</button>
+        <button class="btn btn-success">Proceed</button>
     </div>
 </head>
 <body>
 <div id="cart-list-body" class="container sort-order-dots-container">
+    <h1>Movie Cart</h1>
+    <table id="tab" class="table table-bordered" style="width: 975px;height: 45px; margin: 20px;">
+        <thead>
+        <tr>
+            <th>Number</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Opt</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="text" id="Material_id" class="form-control" readonly="readonly" /></td>
+            <td><input type="text" id="Material_serial" class="form-control" readonly="readonly" /></td>
+            <td><input type="text" id="Material_name" class="form-control" readonly="readonly" /></td>
+            <td><input type="number" id="number" class="form-control" /></td>
+            <td><input type="text" id="Material_unit" class="form-control" readonly="readonly" /></td>
+            <td>
+                <button type="button" class="btn btn-danger">delete</button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <h3 >
+        <div class="row">
+
+            <div class="col-sm-10" style="text-align: right">
+                <label for="inputEmail3" class="col-form-label">Total Price:</label>
+                <div>
+                    <h1 type="email" id="inputEmail3">$15.99</h1>
+                </div>
+            </div>
+        </div>
+    </h3>
 </div>
 <script src="js/cart.js"></script>
 </body>

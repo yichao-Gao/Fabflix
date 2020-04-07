@@ -7,27 +7,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="605df704-a9db-4c4a-9fa3-943db8e011fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CheckoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBconnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GetGenresServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GetGenresServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SingleMovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SingleMovieServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SingleStarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SingleStarServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/CartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/CartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/CheckoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/CheckoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/DBconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/DBconnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/GetGenresServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/GetGenresServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/IndexServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/MovieServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/MovieServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/SingleMovieServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/SingleMovieServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/SingleStarServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/SingleStarServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CheckoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CheckoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DBconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBconnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GetGenresServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GetGenresServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IndexServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MovieServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MovieServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SingleMovieServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SingleMovieServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SingleStarServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SingleStarServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles 3.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles 3.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-04-05" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-04-05" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +83,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/materials" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -290,6 +308,8 @@
       <workItem from="1586109265470" duration="137000" />
       <workItem from="1586109460467" duration="6179000" />
       <workItem from="1586129644386" duration="3169000" />
+      <workItem from="1586148910493" duration="2075000" />
+      <workItem from="1586234629919" duration="5764000" />
     </task>
     <servers />
   </component>
@@ -309,9 +329,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1586025203880" />
-    <state x="591" y="341" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586125609626">
-      <screen x="0" y="23" width="1792" height="1020" />
+    <state x="633" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586234783896">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="633" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586234783896" />
     <state x="591" y="341" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1020@0.23.1792.1020" timestamp="1586125609626" />
     <state x="637" y="403" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1586033313937">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -330,6 +351,10 @@
     </state>
     <state width="470" height="466" key="DebuggerActiveHint/0.0.1792.1120@0.0.1792.1120" timestamp="1586034991246" />
     <state width="470" height="427" key="DebuggerActiveHint/0.23.1792.1024@0.23.1792.1024" timestamp="1586109990300" />
+    <state x="708" y="297" key="FileChooserDialogImpl" timestamp="1586234761488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="708" y="297" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586234761488" />
     <state width="1204" height="279" key="GridCell.Tab.0.bottom" timestamp="1586129249662">
       <screen x="0" y="23" width="1792" height="1022" />
     </state>
@@ -430,19 +455,22 @@
     </state>
     <state width="1204" height="318" key="GridCell.Tab.3.right/0.0.1792.1120@0.0.1792.1120" timestamp="1586041781667" />
     <state width="1204" height="279" key="GridCell.Tab.3.right/0.23.1792.1022@0.23.1792.1022" timestamp="1586129249664" />
-    <state x="384" y="141" key="SettingsEditor" timestamp="1585954526353">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="411" y="131" key="SettingsEditor" timestamp="1586234765261">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1585954526353" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1586129644268">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state x="411" y="131" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586234765261" />
+    <state x="614" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1586234632409">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585976893826" />
+    <state x="614" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586234632409" />
     <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586129644268" />
     <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1586109408704" />
-    <state x="679" y="251" width="670" height="679" key="search.everywhere.popup" timestamp="1585953766975">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state x="728" y="232" width="718" height="690" key="search.everywhere.popup" timestamp="1586239484963">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="728" y="232" width="718" height="690" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586239484963" />
     <state x="679" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1792.1020@0.23.1792.1020" timestamp="1585870476527" />
     <state x="679" y="251" width="670" height="679" key="search.everywhere.popup/0.23.1792.1024@0.23.1792.1024" timestamp="1585953766975" />
   </component>
