@@ -8,6 +8,7 @@
     <title>Album example for Bootstrap</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -39,71 +40,77 @@
 
     <!-- autocomplete plugin used by autocomplete input-->
     <script src="libs/autocomplete/jquery.autocomplete.js"></script>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fabflix</a>
+        <div class="col-sm"></div>
 
+        <div class="col-sm" style="text-align: right;">
+            <button class="btn btn-light btn-outline-success" onclick="checkoutTotal()">Checkout</button>
+        </div>
+    </nav>
 </head>
 
 
-
-<header style="background-color: white">
-    <div class="container d-flex justify-content-between">
-            <form id = "searchAndBrowser" method="POST" style="float: left">
-                <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="col-sm">
-                            <a href="#" class="navbar-brand d-flex align-items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                                <strong>Fabflix</strong>
-                            </a>
-                        </div>
-                        <div  class="input-group col">
-                            <input type="text" name="search" placeholder="Type the movie..." aria-describedby="basic-addon1"/>
-                        </div>
-                        <div class="col">
-                            <select class="custom-select" name="search" id="inputGroupSelect01">
-                                <option selected>Choose...</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <select class="custom-select" name = "sortBy" id="sortByType">
-                                <option class="custom-select-sm">Sort By</option>
-                                <option>Default</option>
-                                <option>Rating Up</option>
-                                <option>Rating Down</option>
-                                <option>Title Up</option>
-                                <option>Title Down</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <input class="btn btn-success" type="submit" value="go" id="go"/>
-                        </div>
-                    </div>
-                </div>
-
-            </form>
-
-        </div>
-    </div>
-</header>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<body style="background-color: black" >
+<body>
+    <div class="row"></div>
+    <div class="container input-group px-md-5">
+        <input class="form-control" onkeyup="searchMovie()" id="search" type="text" placeholder="Search..">
+        <div class="input-group-append dropdown">
+            <button class="input-group-text btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Genres</button>
+            <div id="genresProjectionDiv" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            </div>
+        </div>
+        <div class="input-group-append dropdown">
+            <button class="input-group-text btn btn-secondary" id="sortByRating">Rating</button><i class="fa fa-sort"></i>
+        </div>
+        <div class="input-group-append dropdown">
+            <button class="input-group-text btn btn-secondary" id="sortByTitle">Title</button><i class="fa fa-sort"></i>
+        </div>
+    </div>
+
+    <!-- This is the pop up window!-->
+    <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Item purchased</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Finish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the pop up window!-->
+
     <svg xmlns="http://www.w3.org/2000/svg" width="348" height="225" viewBox="0 0 348 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg>
 
     <div id="loader"></div>
-    <div style="display:none;" id="movieContainer" class="container">
+    <div style="display:none;" id="movieContainer" class="mx-auto container">
         <!-- Page Heading -->
         <div class="row">
             <div class="col-sm-3">
                 <h1><b><i>Movie List</i></b></h1>
             </div>
             <div class="col-sm-6"></div>
-            <div class="col-sm">
-                <button class="btn btn-light btn-outline-success" onclick="checkoutTotal()">Checkout</button>
-            </div>
         </div>
         <div id = "movie-list-body">
         </div>
@@ -118,5 +125,6 @@
     </div>
     <script src="./js/movie-list.js"> </script>
     <script src="./js/cart.js"></script>
+
 </body>
 </html>

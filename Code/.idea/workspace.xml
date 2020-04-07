@@ -7,27 +7,242 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="605df704-a9db-4c4a-9fa3-943db8e011fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CheckoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBconnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GetGenresServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GetGenresServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SingleMovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SingleMovieServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SingleStarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SingleStarServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/movie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/Cart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/CartServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/CheckoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/DBconnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/GetGenresServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/IndexServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/LoginFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/MovieServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/SingleMovieServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/SingleStarServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/classes/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/lib/gson-2.8.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/lib/javax.annotation-api-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/lib/mysql-connector-java-5.1.46.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/css/editor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/css/line-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/css/loader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/css/vvvebjs-editor-helpers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/fonts/line-awesome.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/fonts/line-awesome.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/fonts/line-awesome.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/fonts/line-awesome.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/fonts/line-awesome.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/cart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/jquery.hotkeys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/log-in.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/movie-list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/single-movie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/js/single-star.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/autocomplete/autocomplete.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/autocomplete/jquery.autocomplete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/blocks-bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/builder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/components-bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/components-server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/components-widgets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/alert.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/arrow-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/arrow-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/badge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/breadcrumbs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/button_group.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/button_toolbar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/cart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/categories.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/chart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/checkbox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/checkout.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/chevron-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/chevron-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/components/cart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/components/checkbox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/components/contact-form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/components/map.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/container.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/file-manager-layout.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/filters.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/folder.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/grid_row.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/heading.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/hr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/instagram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/jumbotron.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/label.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/left-column-layout.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/list_group.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/map.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/maps.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/minus_round.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/navbar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/pagination.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/panel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/paragraph.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/paypal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/play-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/plus_round.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/product.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/product.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/product_gallery.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/products.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/progressbar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/radio.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/right-column-layout.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/select_input.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/slider.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/table.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/text_area.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/text_input.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/twitter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/video.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/icons/well.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/inputs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/plugin-bootstrap-colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/plugin-codemirror.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/plugin-google-fonts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/plugin-jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/builder/undo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/codemirror/lib/codemirror.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/codemirror/lib/codemirror.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/codemirror/lib/formatting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/codemirror/lib/xml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/codemirror/theme/material.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/libs/jszip/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/movie-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_builder.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_csstree.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_jumbotron.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_line-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_spinners.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_toasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/bootstrap-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/bootstrap-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/editor.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_grid-framework.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_nav-divider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_size.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_table-row.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_text-emphasis.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_text-hide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/mixins/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_background.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_embed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_overflow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_screenreaders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/utilities/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/scss/vvvebjs-editor-helpers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/single-movie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/backendCode/single-star.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IndexServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles 3.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles 3.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-04-05" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +286,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.533">
+  <component name="RunManager" selected="Application.DBconnection">
     <configuration name="DBconnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DBconnection" />
       <module name="backendCode" />
@@ -244,15 +459,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.DBconnection" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.533" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.DBconnection" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -289,7 +495,9 @@
       <workItem from="1585976923922" duration="20591000" />
       <workItem from="1586109265470" duration="137000" />
       <workItem from="1586109460467" duration="6179000" />
-      <workItem from="1586129644386" duration="3169000" />
+      <workItem from="1586129644386" duration="5863000" />
+      <workItem from="1586209958108" duration="5352000" />
+      <workItem from="1586220673449" duration="3627000" />
     </task>
     <servers />
   </component>
@@ -297,6 +505,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="497" y="190" key="#Configure_Path_Variables" timestamp="1586209964397">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="497" y="190" key="#Configure_Path_Variables/0.23.1792.1017@0.23.1792.1017" timestamp="1586209964397" />
     <state x="495" y="239" key="#Tomcat_Server" timestamp="1586025177089">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -434,30 +646,16 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1585954526353" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1586129644268">
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1586220673290">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585976893826" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586129644268" />
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586220673290" />
     <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1586109408704" />
     <state x="679" y="251" width="670" height="679" key="search.everywhere.popup" timestamp="1585953766975">
       <screen x="0" y="23" width="1792" height="1024" />
     </state>
     <state x="679" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1792.1020@0.23.1792.1020" timestamp="1585870476527" />
     <state x="679" y="251" width="670" height="679" key="search.everywhere.popup/0.23.1792.1024@0.23.1792.1024" timestamp="1585953766975" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/DBconnection.java</url>
-          <line>10</line>
-          <properties class="DBconnection" method="getDBconnection">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

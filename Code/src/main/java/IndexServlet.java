@@ -24,12 +24,11 @@ public class IndexServlet extends HttpServlet {
     /**
      * handles POST requests to store session information
      */
-    protected void doPost(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
+    @Override
+    protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
 
-        String search = request.getParameter("search");
-        String browse = request.getParameter("browse");
-        String sort = request.getParameter("sortBy");
-
+        String search = request.getParameter("genre");
+        System.out.println("search result: " + search);
         // write all the data into the jsonObject
         // response.getWriter().write(responseJsonObject.toString());
         String query = "SELECT m.id as movieId, m.title as movieTitle, m.year as movieYear, m.director as movieDirector, " +
@@ -43,34 +42,35 @@ public class IndexServlet extends HttpServlet {
         "and gim.genreId = g.id " +
         "and r.movieId = m.id ";
         
-        String updateQuery = "select * from ("+query + ") t where";
-        if (search.length() !=0 && !browse.equals("Default")) {
-            updateQuery += " t.movieTitle like '%"+search+"%' ";
-            updateQuery += " and t.genres='"+browse+"' ";
-        } else if (search.length() == 0 && !browse.equals("Default")) {
-            updateQuery += " t.genres='"+browse+"' ";
-        } else if (search.length() != 0 && browse.equals("Default")){
-            updateQuery += " t.movieTitle like '%"+search+"%' ";
-        } else {
-            updateQuery = query;
-        }
+        String updateQuery = "select * from ("+query + ") t where t.genres='" + search + "'";
+//         if (search.length() !=0 && !browse.equals("Default")) {
+//             updateQuery += " t.movieTitle like '%"+search+"%' ";
+//             updateQuery += " and t.genres='"+browse+"' ";
+//         } else if (search.length() == 0 && !browse.equals("Default")) {
+//             updateQuery += " t.genres='"+browse+"' ";
+//         } else if (search.length() != 0 && browse.equals("Default")){
+//             updateQuery += " t.movieTitle like '%"+search+"%' ";
+//         } else {
+//             updateQuery = query;
+//         }
 
-        switch(sort) {
-            case "Rating Up":
-                updateQuery += " order by rating DESC ";
-                break;
-            case "Rating Down":
-                updateQuery += " order by rating ";
-                break;
-            case "Title Up":
-                updateQuery += " order by movieTitle DESC ";
-                break;
-            case "Title Down":
-                updateQuery += " order by movieTitle ";
-                break;
-            default:
-                break;
-        }
+
+//        switch(sort) {
+//            case "Rating Up":
+//                updateQuery += " order by rating DESC ";
+//                break;
+//            case "Rating Down":
+//                updateQuery += " order by rating ";
+//                break;
+//            case "Title Up":
+//                updateQuery += " order by movieTitle DESC ";
+//                break;
+//            case "Title Down":
+//                updateQuery += " order by movieTitle ";
+//                break;
+//            default:
+//                break;
+//        }
 
         System.out.println();
         System.out.println("update Query: "+updateQuery);
@@ -134,7 +134,7 @@ public class IndexServlet extends HttpServlet {
     /**
      * handles GET requests to add and show the item list information
      */
-    protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
+    protected void doPost(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
         final String item = request.getParameter("item");
         System.out.println(item);
         final HttpSession session = request.getSession();

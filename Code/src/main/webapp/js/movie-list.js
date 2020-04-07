@@ -23,7 +23,24 @@ function spanNextFunc() {
         createTable(globalResultData, curPage);
     }
 }
-
+function searchMovie() {
+    let body =  document.getElementById("movie-list-body");
+    let titles = body.getElementsByTagName("h1");
+    let input = document.getElementById("search");
+    let filter = input.value.toUpperCase();
+    console.log(titles);
+    for (let i = 0; i < titles.length; i++) {
+        if (titles[i]) {
+            let movieTitleContent = titles[i].innerText;
+            let row = titles[i].parentElement.parentElement.parentElement;
+            if (movieTitleContent.toUpperCase().indexOf(filter) > -1) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        }
+    }
+}
 
 function createTable(resultData, curPage) {
     document.getElementById("loader").style.display = "none";
@@ -68,7 +85,7 @@ function createTable(resultData, curPage) {
                     }
                 rowHTML+="</div>";
                 rowHTML+="<div class=\"col-md-5\">";
-                    rowHTML += "<h1>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h1>";
+                    rowHTML += "<h2>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h2>";
                     rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
 
                     let preGenres = "";
@@ -80,7 +97,8 @@ function createTable(resultData, curPage) {
                         }
                         i++;
                     }
-                    rowHTML+="<button id='btn_"+movieId+"' class=\"btn btn-primary\" onclick='checkoutBtn(this)' href=\"#\">Add To Cart</button>";
+                    rowHTML+="<button id='btn_"+movieId+"' class=\"btn btn-primary\"" +
+                        "data-toggle=\"modal\" onclick=showPopUpItem(this) href=\"#\">Add To Cart</button>";
                 rowHTML+="</div>";
             rowHTML+="</div>";
             rowHTML+="<hr>";
@@ -92,40 +110,48 @@ function createTable(resultData, curPage) {
     }
 }
 
+
+function showPopUpItem(title) {
+    console.log(title);
+    jQuery('#itemModal').modal({
+        remote: "showAction.action?id="+title
+    });
+}
 function createGenres(resultData) {
     console.log("handleStarResult: populating genres table from resultData");
-    let selectOptionBody = $("#genresSelect");
+    console.log(resultData);
+    let selectOptionBody = $("#genresProjectionDiv");
     for (let i = 0; i < resultData.length; i++) {
         let rowHTML = "";
-        rowHTML += "<option>";
+        rowHTML += "<button onclick='genresProjection()' id='"+resultData[i]['genre']+"' class=\"dropdown-item\">";
         rowHTML += resultData[i]['genre'];
-        rowHTML += "</option>";
+        rowHTML += "</button>";
         selectOptionBody.append(rowHTML);
     }
 }
-
+function genresProjection() {
+    let genresList = document.getElementById("genresProjectionDiv");
+    let options = genresList.getElementsByTagName("button");
+    for (let i = 0; i < options.length; i++) {
+        options[i].onclick=function () {
+            console.log(this.id);
+            /** listening to the search and browse function */
+            $.ajax({
+                type: "GET",
+                url: "/backendCode/api/index?genre="+this.id,
+                dataType: 'json',
+                success: (data) => updateTable(data),
+                error: (error) => {
+                    console.log(error);
+                }
+            });
+        }
+    }
+}
 function updateTable(resultData) {
-    
     createTable(resultData, 1);
 }
 
-/** listening to the search and browse function */
-$("#searchAndBrowser").submit(function(e) {
-    e.preventDefault(); // avoid to execute the actual submit of the form.s
-
-    let form = $(this);
-    console.log(form);
-    $.ajax({
-           type: "POST",
-           url: "/backendCode/api/index",
-           data: form.serialize(), // serializes the form's elements.
-           dataType: 'json',
-           success: (data) => updateTable(data),
-           error: (error) => {
-               console.log(error);
-           }
-         });
-});
 
 $.ajax({
     url: '/backendCode/api/movie',
