@@ -1,6 +1,6 @@
 # FabflixHome
 Netflix-like E-commerce website for buying movie
-# Yichao Gao's branch
+
 ## Environment
 
 ### Backend
