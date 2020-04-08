@@ -24,7 +24,7 @@ The following **required** functionality is complete:
 
   
 ## How to start
-* Open your favorite browser, type the AWS link: http://ec2-13-58-77-115.us-east-2.compute.amazonaws.com:8080/backendCode/
+* Open your favorite browser, click on following link:  [Fablix Amazon Web Service](http://ec2-13-58-77-115.us-east-2.compute.amazonaws.com:8080/backendCode/)
 * Then enjoy!
 
 ## Demonstration
