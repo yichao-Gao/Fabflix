@@ -121,9 +121,17 @@ function createTable(resultData, curPage) {
 
 
 function showPopUpItem(title) {
-    console.log(title);
-    jQuery('#itemModal').modal({
-        remote: "showAction.action?id="+title
+    let btn_id = $(title).attr("id");
+    $.ajax({
+        url: "/backendCode/api/cart?id="+btn_id,
+        dataType: "json",
+        method: "GET",
+        success: () => {
+            alert("Succesfully add!")
+        },
+        error: (error) => {
+            console.log(error);
+        }
     });
 }
 function createGenres(resultData) {
