@@ -18,6 +18,7 @@ The following **required** functionality is complete:
 * [x] Movie-list, Single-movie, Single-star Page
 * [x] Fuzzy search of the movie, sort and projection function of the movie genres
 * [x] Cart based on the session information of the user
+* [ ] Advanced Search
 * [ ] Check out function using Alipay
 * [ ] Load balance
 * [ ] HTTPs and reCAPTCHA
