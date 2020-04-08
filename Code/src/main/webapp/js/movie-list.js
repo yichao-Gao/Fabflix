@@ -67,36 +67,45 @@ function createTable(resultData, curPage) {
     for (let i = startIndex; i < resultData.length; i++) {
         let movieId = resultData[i]['movie_id'];
         let rowHTML = "";
-        rowHTML += "<div>";
-            rowHTML+="<div class='row'>";
-                rowHTML+="<div class=\"col-md-6\">";
-                    rowHTML+='<h1><a id='+movieId+' href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
+        rowHTML += "<div class='col-centered text-center' style='color: white'>";
+            rowHTML+="<div class='card bg-dark'>";
+                rowHTML+="<div class=\"card-header\">";
+                    rowHTML+='<h1><a ' +
+                        'style="text-decoration: none; " ' +
+                        'id='+movieId+' href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
                         + resultData[i]["movie_title"] +     // display star_name for the link text
                         '</a></h1>';
-                    // start to add list of stars
-                    let index = i;
-                    let movie_title = resultData[i]["movie_title"];
-                    while (index < resultData.length && resultData[index]["movie_title"] === movie_title) {
-
-                        rowHTML+='<span><a href="/backendCode/single-star.html?id=' + resultData[index]['star_id'] + '">'
-                            + resultData[index]["star_name"] +     // display star_name for the link text
-                            '</a></span>';
-                        index++;
-                    }
-                rowHTML+="</div>";
-                rowHTML+="<div class=\"col-md-5\">";
                     rowHTML += "<h2>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h2>";
                     rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
+                rowHTML+="</div>";
+                rowHTML+="<div class=\"card-body\">";
+                    rowHTML += "<div class='card-title'>";
+                        // start to add list of stars
+                        let index = i;
+                        let movie_title = resultData[i]["movie_title"];
+                        while (index < resultData.length && resultData[index]["movie_title"] === movie_title) {
 
+                            rowHTML+='<span><a class="btn btn-outline-primary" ' +
+                                'href="/backendCode/single-star.html?id=' + resultData[index]['star_id'] + '">'
+                                + resultData[index]["star_name"] +  // display star_name for the link text
+                                '</a></span>';
+                            index++;
+                        }
+                    rowHTML += "</div>";
                     let preGenres = "";
+                    rowHTML += "<span>" +
+                        "<h4>";
                     // start to add list of genres
                     while (i < resultData.length && resultData[i]["movie_title"] === movie_title) {
                         if (preGenres === ""||preGenres !== resultData[i]["movie_genres"]) {
-                            rowHTML+="<h3>"+resultData[i]["movie_genres"]+"</h3>";
+                            rowHTML+= resultData[i]["movie_genres"]+" ";
                             preGenres = resultData[i]["movie_genres"];
                         }
                         i++;
                     }
+                    rowHTML += "</h4>" +
+                        "</span>";
+
                     rowHTML+="<button id='btn_"+movieId+"' class=\"btn btn-primary\"" +
                         "data-toggle=\"modal\" onclick=showPopUpItem(this) href=\"#\">Add To Cart</button>";
                 rowHTML+="</div>";
