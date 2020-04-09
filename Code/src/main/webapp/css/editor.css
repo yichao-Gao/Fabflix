@@ -3451,7 +3451,6 @@ pre {
 .form-control {
   display: block;
   width: 100%;
-  height: default;
   padding: 0.4rem 0.5rem;
   font-size: 1rem;
   font-weight: 400;
@@ -4828,7 +4827,6 @@ input[type="button"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: default;
   padding: 0.4rem 1.5rem 0.4rem 0.5rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4874,14 +4872,12 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: default;
   margin-bottom: 0; }
 
 .custom-file-input {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: default;
   margin: 0;
   opacity: 0; }
   .custom-file-input:focus ~ .custom-file-label {
@@ -4900,7 +4896,6 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: default;
   padding: 0.4rem 0.5rem;
   font-weight: 400;
   line-height: 1.5;

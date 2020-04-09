@@ -9,7 +9,7 @@
             crossorigin="anonymous"></script>
 
 
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- include jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -53,9 +53,9 @@
             </div>
         </div>
         <div class="main">
-            <div class="col-md-5 col-sm-13">
+            <div class="col-md-4  col-sm">
                 <div class="login-form">
-                    <form id="loginForm">
+                    <form id="loginForm" action="form-recaptcha">
                         <div class="form-group">
                             <label>User Name</label>
                             <input type="text" name="username" class="form-control" placeholder="User Name">
@@ -68,6 +68,8 @@
                             <label>Password</label>
                             <input type="password" name="password" class="form-control" placeholder="Password">
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6LfZ9ucUAAAAAJ2WQjUn3vy6jmnrX11CNeL6BObp"></div>
+                        <br>
                         <button type="submit" class="btn btn-black" style="width: 40%;">Login</button>
                     </form>
                 </div>
@@ -79,11 +81,7 @@
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
         async defer>
 </script>
-<script type="text/javascript">
-    let onloadCallback = function() {
-        alert("grecaptcha is ready!");
-    };
-</script>
+
 <style>
 
     body {
@@ -159,16 +157,5 @@
         background-color: #000 !important;
         color: #fff;
     }
-    /*.form-label-group input:not(:placeholder-shown) {*/
-    /*  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));*/
-    /*  padding-bottom: calc(var(--input-padding-y) / 3);*/
-    /*}*/
-
-    /*.form-label-group input:not(:placeholder-shown)~label {*/
-    /*  padding-top: calc(var(--input-padding-y) / 3);*/
-    /*  padding-bottom: calc(var(--input-padding-y) / 3);*/
-    /*  font-size: 12px;*/
-    /*  color: #777;*/
-    /*}*/
 </style>
 </html>

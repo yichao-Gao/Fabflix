@@ -25,7 +25,11 @@ public class CartServlet extends HttpServlet {
                 System.out.println("the user hasn't been logged in!");
             }
             Cart cart = ((User) request.getSession().getAttribute("user")).getCart();
-            cart.movieQuantity.putIfAbsent(movieId, cart.movieQuantity.getOrDefault(movieId, 0) + 1);
+            cart.movieQuantity.put(movieId, cart.movieQuantity.getOrDefault(movieId, 0) + 1);
+            for (String key: cart.movieQuantity.keySet()) {
+                System.out.println(key + ":" + cart.movieQuantity.get(key));
+            }
+            System.out.println();
             response.setStatus(200);
         } catch (Exception e) {
             JsonObject jsonObject = new JsonObject();

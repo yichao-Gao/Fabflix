@@ -42,7 +42,7 @@ public class MovieServlet extends HttpServlet {
                     "and sim.starId = s.id " +
                     "and m.id = gim.movieId " +
                     "and gim.genreId = g.id " +
-                    "and r.movieId = m.id limit 100";
+                    "and r.movieId = m.id limit 10000";
 
             Connection connection = DBconnection.getDBconnection();
             // Declare our statement

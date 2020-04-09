@@ -42,6 +42,7 @@ public class CheckoutServlet extends HttpServlet {
                 resultSet.next();
                 String movieTitle = resultSet.getString("title");
                 int quantity = cart.movieQuantity.get(key);
+                jsonObject.addProperty("id", key);
                 jsonObject.addProperty("title", movieTitle);
                 jsonObject.addProperty("quantity", quantity);
                 jsonObject.addProperty("price", 1 + random.nextFloat() * 10);

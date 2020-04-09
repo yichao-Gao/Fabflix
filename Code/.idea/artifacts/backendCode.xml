@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="backendCode:war exploded">
+  <artifact type="exploded-war" name="backendCode">
     <output-path>$PROJECT_DIR$/target/backendCode</output-path>
     <properties id="maven-jee-properties">
       <options>

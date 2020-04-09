@@ -65,9 +65,6 @@
           <artifactId>tomcat7-maven-plugin</artifactId>
           <version>2.2</version>
           <configuration>
-            <httpsPort>8443</httpsPort>
-            <keystoreFile>/Users/simon/Desktop/CS122b/apache-tomcat-8.5.53/keystore</keystoreFile>
-            <keystorePass>123456</keystorePass>
             <port>8080</port>
           </configuration>
         </plugin>
