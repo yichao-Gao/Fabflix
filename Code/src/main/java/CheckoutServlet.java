@@ -41,11 +41,12 @@ public class CheckoutServlet extends HttpServlet {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 resultSet.next();
                 String movieTitle = resultSet.getString("title");
-                int quantity = cart.movieQuantity.get(key);
+                int quantity = cart.movieQuantity.get(key).getQuantity();
+                double price = cart.movieQuantity.get(key).getUnitPrice();
                 jsonObject.addProperty("id", key);
                 jsonObject.addProperty("title", movieTitle);
                 jsonObject.addProperty("quantity", quantity);
-                jsonObject.addProperty("price", 1 + random.nextFloat() * 10);
+                jsonObject.addProperty("price", price);
                 jsonArray.add(jsonObject);
             }
             out.write(jsonArray.toString());

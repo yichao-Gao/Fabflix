@@ -47,13 +47,12 @@
         <button class="btn btn-success">Proceed</button>
     </div>
 </head>
-<body>
+<body style="background-color: black">
 <div id="cart-list-body" class="container sort-order-dots-container">
-    <h1>Movie Cart</h1>
-    <table id="tab" class="table table-bordered" style="width: 975px;height: 45px; margin: 20px;">
+    <h1><span style="color: red; ">Movie Cart</span></h1>
+    <table id="cart_table" class="table table-bordered" style="width: 975px;height: 45px; margin: 20px; color: #007bff;">
         <thead>
         <tr>
-            <th>Number</th>
             <th>ID</th>
             <th>Title</th>
             <th>Qty</th>
@@ -61,27 +60,16 @@
             <th>Opt</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <td><input type="text" id="Material_id" class="form-control" readonly="readonly" /></td>
-            <td><input type="text" id="Material_serial" class="form-control" readonly="readonly" /></td>
-            <td><input type="text" id="Material_name" class="form-control" readonly="readonly" /></td>
-            <td><input type="number" id="number" class="form-control" /></td>
-            <td><input type="text" id="Material_unit" class="form-control" readonly="readonly" /></td>
-            <td>
-                <button type="button" class="btn btn-danger">delete</button>
-            </td>
-        </tr>
-
+        <tbody id="cart_tbody">
         </tbody>
     </table>
     <h3 >
         <div class="row">
 
             <div class="col-sm-10" style="text-align: right">
-                <label for="inputEmail3" class="col-form-label">Total Price:</label>
+                <label><span style="color: #007bff">Total Price:</span></label>
                 <div>
-                    <h1 type="email" id="inputEmail3">$15.99</h1>
+                    <h1 id="total_price" style="color: #007bff;"></h1>
                 </div>
             </div>
         </div>
