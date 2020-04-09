@@ -7,19 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="605df704-a9db-4c4a-9fa3-943db8e011fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reCaptChaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reCaptChaVerifyUnits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reCaptchaConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MovieServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/movie-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/single-star.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/single-movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/single-movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/single-star.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/single-star.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +270,7 @@
       <workItem from="1586209958108" duration="5352000" />
       <workItem from="1586220673449" duration="3935000" />
       <workItem from="1586226575202" duration="16347000" />
-      <workItem from="1586371405983" duration="6188000" />
+      <workItem from="1586371405983" duration="7833000" />
     </task>
     <servers />
   </component>
@@ -453,11 +441,11 @@
     </state>
     <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1585954526353" />
     <state x="426" y="195" width="900" height="722" key="SettingsEditor/0.23.1792.1017@0.23.1792.1017" timestamp="1586281335469" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1586226650099">
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1586400365693">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585976893826" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586226650099" />
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1586400365693" />
     <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1586109408704" />
     <state x="679" y="251" width="670" height="679" key="search.everywhere.popup" timestamp="1585953766975">
       <screen x="0" y="23" width="1792" height="1024" />
