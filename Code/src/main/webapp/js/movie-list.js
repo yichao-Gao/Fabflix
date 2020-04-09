@@ -3,25 +3,66 @@ numberOfPages = 0;
 numberOfRowPerPage = 10;
 curPage = 1;
 globalResultData = "";
+
+rowCache = new Map();
+curIndexRow = 0;
 function initializePage(resultData) {
     globalResultData = resultData;
     numberOfRows = globalResultData.length;
-    if (numberOfRows % numberOfRowPerPage == 0) numberOfPages = numberOfRows % numberOfRowPerPage;
+    if (numberOfRows % numberOfRowPerPage == 0) numberOfPages = numberOfRows / numberOfRowPerPage;
     else numberOfPages = parseInt(numberOfRows / numberOfRowPerPage + 1);
+
+    let firstBtn = document.getElementById("spanFirst");
+    firstBtn.disabled = false;
+    let preBtn = document.getElementById("spanPre");
+    preBtn.disabled = false;
 }
 
+function spanFirstFunc() {
+
+}
 function spanPreFunc() {
+    let lastBtn = document.getElementById("spanLast");
+    lastBtn.disabled = false;
+    let nextBtn = document.getElementById("spanNext");
+    nextBtn.disabled = false;
+    if (curPage === 2) {
+        let firstBtn = document.getElementById("spanFirst");
+        firstBtn.disabled = true;
+        let preBtn = document.getElementById("spanPre");
+        preBtn.disabled = true;
+    }
     if (curPage > 1) {
-        curPage--;
-        createTable(globalResultData, curPage)
+        let expectPage = curPage - 1;
+        createTable(globalResultData, expectPage);
+        curPage = expectPage;
     }
 }
 
 function spanNextFunc() {
-    if (curPage < numberOfPages) {
-        curPage++;
-        createTable(globalResultData, curPage);
+    let firstBtn = document.getElementById("spanFirst");
+    firstBtn.disabled = false;
+    let preBtn = document.getElementById("spanPre");
+    preBtn.disabled = false;
+    if (curPage === numberOfPages - 1) {
+        let lastBtn = document.getElementById("spanLast");
+        lastBtn.disabled = true;
+        let nextBtn = document.getElementById("spanNext");
+        nextBtn.disabled = true;
     }
+
+    if (curPage < numberOfPages) {
+        let expectPage = curPage + 1;
+        createTable(globalResultData, expectPage);
+        curPage = expectPage;
+    }
+}
+
+function spanLastFunc() {
+    let expectPage = numberOfPages;
+    createTable(globalResultData, expectPage);
+    let lastBtn = document.getElementById("spanLast");
+    lastBtn.disabled = true;
 }
 function searchMovie() {
     let body =  document.getElementById("movie-list-body");
@@ -42,80 +83,87 @@ function searchMovie() {
     }
 }
 
-function createTable(resultData, curPage) {
+function createTable(resultData, expectPage) {
     document.getElementById("loader").style.display = "none";
     document.getElementById("movieContainer").style.display = "block";
     let movieTableBodyElementId = document.getElementById("movie-list-body");
     movieTableBodyElementId.innerHTML = "";
     console.log("handleStarResult: populating movie list table from resultData");
-    /** Example
-     movie_id: "tt0395642"
-     movie_title: "Loma Lynda: Episode II"
-     movie_year: "2004"
-     movie_director: "Jason Bognacki"
-     start_id: "nm1531570"
-     star_name: "Sarah Ellquist"
-     movie_genres: "Drama"
-     movie_rating: "9.7"
-     * **/
+
+
     // Populate the star table
     // Find the empty table body by id "star_table_body"
     let movieTableBodyElement = jQuery("#movie-list-body");
-    let startIndex = numberOfRowPerPage * (curPage - 1);
-    let endIndex = numberOfRowPerPage + numberOfRowPerPage * (curPage - 1);
-    // Iterate through resultData, no more than 10 entries
-    for (let i = startIndex; i < resultData.length; i++) {
-        let movieId = resultData[i]['movie_id'];
-        let rowHTML = "";
-        rowHTML += "<div class='col-centered text-center' style='color: white'>";
-            rowHTML+="<div class='card bg-dark'>";
-                rowHTML+="<div class=\"card-header\">";
-                    rowHTML+='<h1><a ' +
-                        'style="text-decoration: none; " ' +
-                        'id='+movieId+' href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
-                        + resultData[i]["movie_title"] +     // display star_name for the link text
-                        '</a></h1>';
-                    rowHTML += "<h2>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h2>";
-                    rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
-                rowHTML+="</div>";
-                rowHTML+="<div class=\"card-body\">";
-                    rowHTML += "<div class='card-title'>";
-                        // start to add list of stars
-                        let index = i;
-                        let movie_title = resultData[i]["movie_title"];
-                        while (index < resultData.length && resultData[index]["movie_title"] === movie_title) {
+    let numRow = numberOfRowPerPage;
 
-                            rowHTML+='<span><a class="btn btn-outline-primary" ' +
-                                'href="/backendCode/single-star.html?id=' + resultData[index]['star_id'] + '">'
-                                + resultData[index]["star_name"] +  // display star_name for the link text
-                                '</a></span>';
-                            index++;
-                        }
-                    rowHTML += "</div>";
-                    let preGenres = "";
-                    rowHTML += "<span>" +
-                        "<h4>";
-                    // start to add list of genres
-                    while (i < resultData.length && resultData[i]["movie_title"] === movie_title) {
-                        if (preGenres === ""||preGenres !== resultData[i]["movie_genres"]) {
-                            rowHTML+= resultData[i]["movie_genres"]+" ";
-                            preGenres = resultData[i]["movie_genres"];
-                        }
-                        i++;
-                    }
-                    rowHTML += "</h4>" +
-                        "</span>";
 
-                    rowHTML+="<button id='btn_"+movieId+"' class=\"btn btn-primary\"" +
-                        "data-toggle=\"modal\" onclick=showPopUpItem(this) href=\"#\">Add To Cart</button>";
-                rowHTML+="</div>";
-            rowHTML+="</div>";
-            rowHTML+="<hr>";
-        rowHTML+="</div>";
+    // if that page has already been cached, then just used that cache data
+    if (rowCache.has(expectPage)) {
+        let rowHtmlList = rowCache.get(expectPage);
+        for (let i = 0; i < rowHtmlList.length; i++) {
+            movieTableBodyElement.append(rowHtmlList[i]);
+        }
+    } else {
+        rowCache.set(expectPage, []);
+        // we get the current index of the row
+        let i = curIndexRow;
+        for (; i < resultData.length; i++) {
+            let movieId = resultData[i]['movie_id'];
+            let rowHTML = "";
+            rowHTML += "<div style='color: white'>";
+            rowHTML += "<div class='card bg-dark'>";
+            rowHTML += "<div class=\"card-header\">";
+            rowHTML += '<h1><a ' +
+                'style="text-decoration: none; " ' +
+                'id=' + movieId + ' href="/backendCode/single-movie.html?id=' + resultData[i]['movie_id'] + '">'
+                + resultData[i]["movie_title"] +     // display star_name for the link text
+                '</a></h1>';
+            rowHTML += "<h2>" + resultData[i]["movie_rating"] + " BY " + resultData[i]["movie_director"] + "</h2>";
+            rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
+            rowHTML += "</div>";
+            rowHTML += "<div class=\"card-body col-centered text-center \">";
+            rowHTML += "<div class='card-title'>";
+            // start to add list of stars
+            let index = i;
+            let movie_title = resultData[i]["movie_title"];
+            while (index < resultData.length && resultData[index]["movie_title"] === movie_title) {
 
-        // Append the row created to the table body, which will refresh the page
-        movieTableBodyElement.append(rowHTML);
-        if (--endIndex === 0) break;
+                rowHTML += '<span><a class="btn btn-outline-primary" ' +
+                    'href="/backendCode/single-star.html?id=' + resultData[index]['star_id'] + '">'
+                    + resultData[index]["star_name"] +  // display star_name for the link text
+                    '</a></span>';
+                index++;
+            }
+            rowHTML += "</div>";
+            let preGenres = "";
+            rowHTML += "<span>" +
+                "<h4>";
+            // start to add list of genres
+            while (i < resultData.length && resultData[i]["movie_title"] === movie_title) {
+                if (preGenres === "" || preGenres !== resultData[i]["movie_genres"]) {
+                    rowHTML += resultData[i]["movie_genres"] + " ";
+                    preGenres = resultData[i]["movie_genres"];
+                }
+                i++;
+            }
+            rowHTML += "</h4>" +
+                "</span>";
+
+            rowHTML += "<button id='btn_" + movieId + "' class=\"btn btn-primary\"" +
+                "onclick=showPopUpItem(this)  href=\"#\">Add To Cart</button>";
+            rowHTML += "</div>";
+            rowHTML += "</div>";
+            rowHTML += "<hr>";
+            rowHTML += "</div>";
+
+            // Append the row created to the table body, which will refresh the page
+            movieTableBodyElement.append(rowHTML);
+            let list = rowCache.get(expectPage);
+            list.push(rowHTML);
+            rowCache.set(expectPage, list);
+            if (--numRow === 0) break;
+        }
+        curIndexRow = i;
     }
 }
 

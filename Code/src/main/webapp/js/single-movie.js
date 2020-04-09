@@ -82,10 +82,10 @@ function handleResult(resultData) {
         }
         rowHTML+="</div>";
         rowHTML+="<div class=\"col-md-5\">";
-        rowHTML += "<h1>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h1>";
-        rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
+        rowHTML += "<h1 style='color: white'>" + resultData[i]["rating"] + "  " + resultData[i]["movie_director"]+ "</h1>";
+        rowHTML += "<h3 style='color: white'>" + resultData[i]["movie_year"] + "</h3>";
 
-        rowHTML+="<button class=\"btn btn-primary\" href=\"#\">Add To Cart</button>";
+        rowHTML+="<button class=\"btn btn-primary\" onclick=showPopUpItem(this) href=\"#\">Add To Cart</button>";
         rowHTML+="</div>";
         rowHTML+="</div>";
         rowHTML+="<hr>";

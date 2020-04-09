@@ -56,29 +56,38 @@ function handleResult(resultData) {
     let movieTableBodyElement = jQuery("#single-star-body");
 
     // Concatenate the html tags with resultData jsonObject to create table rows
-    for (let i = 0; i < Math.min(10, resultData.length); i++) {
+    for (let i = 0; i < resultData.length; i++) {
         let rowHTML = "";
         rowHTML+="<div class='row'>";
-            rowHTML+="<div class=\"col-md-6\">";
-                rowHTML+='<h1><a href="/backendCode/single-star.html?id=' + resultData[i]['star_id'] + '">'
-                    + resultData[i]["star_name"] +     // display star_name for the link text
-                    '</a></h1>';
-            // start to add list of stars
-            if (resultData[i]["star_birth"]===null) {
-                rowHTML+="<h3>"+"Secret"+"</h3>";
-            } else {
-                rowHTML+="<h3>"+resultData[i]["star_birth"]+"</h3>";
-            }
+        rowHTML+="<div class=\"col-md-6\">";
+        rowHTML+='<h1><a href="/backendCode/single-star.html?id=' + resultData[i]['star_id'] + '">'
+            + resultData[i]["star_name"] +     // display star_name for the link text
+            '</a></h1>';
+        rowHTML+="</div>";
 
-            rowHTML+="</div>";
-            rowHTML+="<div class=\"col-md-5\">";
-                rowHTML += "<h1>" + resultData[i]["movie_rating"] + "  " + resultData[i]["movie_director"]+ "</h1>";
-                rowHTML += "<h3>" + resultData[i]["movie_year"] + "</h3>";
-            rowHTML+="</div>";
+        rowHTML+="<div class=\"col-md-5\">";
+        // start to add list of stars
+        let index = i;
+        let starId = resultData[i]["star_id"];
+        rowHTML+="<div>";
+
+        while (index < resultData.length && resultData[index]["star_id"] === starId) {
+            rowHTML+="<span>"
+            rowHTML+='<h1><a href="/backendCode/single-movie.html?id=' + resultData[index]['movie_id'] + '">'
+                + resultData[index]["movie_title"] +     // display star_name for the link text
+                '</a></h1>';
+            rowHTML+="<button id='btn_'+ "+resultData[index]['movie_id']+" + class=\"btn btn-primary\" onclick=showPopUpItem(this)" +
+                "href=\"#\">Add To Cart</button>";
+            rowHTML+="</span>"
+            index++;
+        }
+        rowHTML+="</div>";
+        rowHTML+="</div>";
         rowHTML+="</div>";
         rowHTML+="<hr>";
         // Append the row created to the table body, which will refresh the page
         movieTableBodyElement.append(rowHTML);
+        i = index;
     }
 }
 
