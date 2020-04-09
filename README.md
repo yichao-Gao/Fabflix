@@ -30,11 +30,13 @@ The following **required** functionality is complete:
 
 ## Demonstration
 
-![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/login.png)
+![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/Loginv2.jpg)
 
 ![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/Loader.png)
 
-![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/MovieListv2.png)
+![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/movieListv3.jpg)
+
+![image](https://github.com/SimonZhou96/FabflixHome/blob/master/Code/src/main/materials/cartv1.jpg)
 
 
 ## Next Step
