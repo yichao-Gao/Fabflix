@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/advanceSearch.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/loader.css"/>
     <!-- include jQuery-->
 
     <!-- autocomplete plugin used by autocomplete input-->
-    <script src="libs/autocomplete/jquery.autocomplete.js"></script>
     <nav class="navbar navbar-light " style="text-align: left">
         <div class="container d-flex justify-content-between">
             <a href="/backendCode/movie-list.html" class="navbar-brand d-flex align-items-center">
@@ -54,33 +55,40 @@
 <!-- This is the pop up window!-->
 <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content" style="background-color: black">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Advanced Search</h5>
+                <h5 class="modal-title" id="exampleModalLabel" style="color: #ad0803"><b><i>Advanced Search</i></b></h5>
             </div>
             <div class="modal-body">
                 <!-- Search form -->
                 <form>
-                    <div class="form-inline">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Title..."
+
+                    <div class="form-inline" style="margin-top: 10px;">
+                    <i class="fa fa-search" style="color: white" aria-hidden="true"></i>
+                        <!-- Search form -->
+                    <input class="form-control input-group form-control-sm ml-3 w-75" type="text" placeholder="Title..."
                            aria-label="Search">
                     </div>
-                    <div class="form-inline">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Age..."
+
+                    <div class="form-inline" style="margin-top: 10px;">
+                    <i class="fa fa-search" style="color: white" aria-hidden="true"></i>
+                    <input type="number"class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Age..."
                            aria-label="Search">
                     </div>
-                    <div class="form-inline">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+
+                    <div class="form-inline" style="margin-top: 10px;">
+                    <i class="fa fa-search" style="color: white" aria-hidden="true"></i>
                     <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Director..."
                            aria-label="Search">
                     </div>
-                    <div class="form-inline">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Director..."
+
+                    <div class="form-inline" style="margin-top: 10px;">
+                        <i class="fa fa-search" style="color: white" aria-hidden="true"></i>
+                        <input type="number" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Year..."
                                aria-label="Search">
                     </div>
+
+
                 </form>
             </div>
             <div class="modal-footer">
@@ -90,6 +98,7 @@
         </div>
     </div>
 </div>
+<!-- This is the pop up window!-->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -109,11 +118,11 @@
             <div id="genresProjectionDiv" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             </div>
         </div>
-        <div class="input-group-append dropdown">
-            <button class="input-group-text btn btn-secondary" id="sortByRating">Rating</button><i class="fa fa-sort"></i>
+        <div class="input-group-append">
+            <button class="input-group-text btn btn-secondary" onclick="sortByRating()" id="sortByRating">Rating<span style="margin-left: 5px"><i class="fa fa-sort"></i></span></button>
         </div>
         <div class="input-group-append dropdown">
-            <button class="input-group-text btn btn-secondary" id="sortByTitle">Title</button><i class="fa fa-sort"></i>
+            <button class="input-group-text btn btn-secondary" onclick="sortByTitle()" id="sortByTitle">Title<span style="margin-left: 5px"><i class="fa fa-sort"></i></span></button>
         </div>
     </div>
     <!-- This is the pop up window!-->
@@ -123,21 +132,16 @@
         <!-- Page Heading -->
         <div class="container">
             <div class="row">
-            <div class="col-sm">
+            <div class="col-sm" style="text-align: right">
+                <i class="fa fa-arrow-circle-left fa-4x" style="color: white" onclick="spanPreFunc()" id="spanPre"></i>
             </div>
             <div class="col-sm-8">
-                <div class="row">
-                    <div class="col-sm"></div>
-                    <div class="col-sm btn-group">
-                        <button class="btn btn-danger" onclick="spanPreFunc()" id="spanPre">Previous</button>
-                        <button class="btn btn-danger" onclick="spanNextFunc()" id="spanNext">Next</button>
-                    </div>
-                    <div class="col-sm"></div>
-                </div>
                 <div id = "movie-list-body">
                 </div>
             </div>
-            <div class="col-sm"></div>
+            <div class="col-sm">
+                <i class="fa  fa-arrow-circle-right fa-4x" style="color: white" onclick="spanNextFunc()" id="spanNext"></i>
+            </div>
             </div>
         </div>
 

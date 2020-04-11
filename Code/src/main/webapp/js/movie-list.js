@@ -7,9 +7,13 @@ totalItemNum = 0;
 rowCache = new Map();
 itemCache = new Map();
 curIndexRow = 0;
+sortByRatingCount = 0;
+sortByTitleCount = 0;
 function initializePage(resultData) {
     globalResultData = resultData;
     numberOfRows = globalResultData.length;
+    rowCache.clear();
+    curIndexRow = 0;
     if (numberOfRows % numberOfRowPerPage == 0) numberOfPages = numberOfRows / numberOfRowPerPage;
     else numberOfPages = parseInt(numberOfRows / numberOfRowPerPage + 1);
 }
@@ -29,6 +33,39 @@ function spanPreFunc() {
     }
 }
 
+function sortByTitle() {
+    if (globalResultData == null) return err;
+    if (sortByTitleCount % 2 === 0) {
+        globalResultData.sort(function (a, b) {
+            return b["movie_title"] - a["movie_title"]
+        });
+        sortByTitleCount++;
+    } else {
+        globalResultData.sort(function (a, b) {
+            return a["movie_title"] - b["movie_title"]
+        });
+        sortByTitleCount--;
+    }
+    initializePage(globalResultData);
+    createTable(globalResultData, 1);
+}
+
+function sortByRating() {
+    if (globalResultData == null) return err;
+    if (sortByRatingCount % 2 === 0) {
+        globalResultData.sort(function (a, b) {
+            return b["movie_rating"] - a["movie_rating"]
+        });
+        sortByRatingCount++;
+    } else {
+        globalResultData.sort(function (a, b) {
+            return a["movie_rating"] - b["movie_rating"]
+        });
+        sortByRatingCount--;
+    }
+    initializePage(globalResultData);
+    createTable(globalResultData, 1);
+}
 function spanNextFunc() {
     let preBtn = document.getElementById("spanPre");
     preBtn.disabled = false;
@@ -69,7 +106,6 @@ function createTable(resultData, expectPage) {
     let movieTableBodyElementId = document.getElementById("movie-list-body");
     movieTableBodyElementId.innerHTML = "";
     console.log("handleStarResult: populating movie list table from resultData");
-
 
     // Populate the star table
     // Find the empty table body by id "star_table_body"
@@ -129,14 +165,16 @@ function createTable(resultData, expectPage) {
             rowHTML += "</h4>" +
                 "</span>";
 
+            rowHTML += "<div style='display: block'>";
             rowHTML +=
                 "<button id='btn_" + movieId + "' class=\"btn btn-outline-success\"" +
-                "onclick=addItem(this)  href=\"#\">" +
-                "<i class='fa fa-shopping-basket'></i>" +
-                "<span id='span_"+movieId+"' style=\"border-radius: 50%;  display: none;  height: 20px;    width: 20px; background: #f30303;  vertical-align: top;\">" +
-                "<span style=\"color: white;    height: 20px;    line-height: 20px;    text-align: center\"></span>" +
-                "</span>" +
+                "onclick=addItem(this)>" +
+                "<i class='fa fa-shopping-cart'></i>" +
                 "</button>";
+            rowHTML += "<span id='span_"+movieId+"' style=\"border-radius: 50%;  display: none;  height: 20px;    width: 20px; background: #f30303;  vertical-align: top;\">"+
+            "<span style=\"color: white;    height: 20px;    line-height: 20px;    text-align: center\"></span>" +
+            "</span>";
+            rowHTML += "</div>";
             rowHTML += "</div>";
             rowHTML += "</div>";
             rowHTML += "<hr>";
@@ -187,7 +225,6 @@ function addItem(title) {
 }
 function createGenres(resultData) {
     console.log("handleStarResult: populating genres table from resultData");
-    console.log(resultData);
     let selectOptionBody = $("#genresProjectionDiv");
     for (let i = 0; i < resultData.length; i++) {
         let rowHTML = "";
@@ -217,6 +254,8 @@ function genresProjection() {
     }
 }
 function updateTable(resultData) {
+    // we need to clear the cache since the table are different;
+    rowCache.clear();
     createTable(resultData, 1);
 }
 

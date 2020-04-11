@@ -31,3 +31,13 @@
 }
 
 .dropdown-cart:hover .dropdown-content {display: block}
+
+.modal-body input {
+    border: 0;
+    box-shadow:none;
+}
+
+.modal-body input:focus {
+    border-color:#fff;
+    box-shadow:none;
+}

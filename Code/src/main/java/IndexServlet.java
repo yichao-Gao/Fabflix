@@ -43,34 +43,7 @@ public class IndexServlet extends HttpServlet {
         "and r.movieId = m.id ";
         
         String updateQuery = "select * from ("+query + ") t where t.genres='" + search + "'";
-//         if (search.length() !=0 && !browse.equals("Default")) {
-//             updateQuery += " t.movieTitle like '%"+search+"%' ";
-//             updateQuery += " and t.genres='"+browse+"' ";
-//         } else if (search.length() == 0 && !browse.equals("Default")) {
-//             updateQuery += " t.genres='"+browse+"' ";
-//         } else if (search.length() != 0 && browse.equals("Default")){
-//             updateQuery += " t.movieTitle like '%"+search+"%' ";
-//         } else {
-//             updateQuery = query;
-//         }
 
-
-//        switch(sort) {
-//            case "Rating Up":
-//                updateQuery += " order by rating DESC ";
-//                break;
-//            case "Rating Down":
-//                updateQuery += " order by rating ";
-//                break;
-//            case "Title Up":
-//                updateQuery += " order by movieTitle DESC ";
-//                break;
-//            case "Title Down":
-//                updateQuery += " order by movieTitle ";
-//                break;
-//            default:
-//                break;
-//        }
 
         System.out.println();
         System.out.println("update Query: "+updateQuery);
