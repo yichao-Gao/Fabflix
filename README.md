@@ -18,13 +18,14 @@ The following **required** functionality is complete:
 * [x] Movie-list, Single-movie, Single-star Page
 * [x] Fuzzy search of the movie, sort and projection function of the movie genres
 * [x] Cart based on the session information of the user
+* [ ] Advanced Search
 * [ ] Check out function using Alipay
 * [ ] Load balance
 * [ ] HTTPs and reCAPTCHA
 
   
 ## How to start
-* Open your favorite browser, type the AWS link: http://ec2-13-58-77-115.us-east-2.compute.amazonaws.com:8080/backendCode/
+* Open your favorite browser, click on following link:  [Fablix Amazon Web Service](http://ec2-13-58-77-115.us-east-2.compute.amazonaws.com:8080/backendCode/)
 * Then enjoy!
 
 ## Demonstration

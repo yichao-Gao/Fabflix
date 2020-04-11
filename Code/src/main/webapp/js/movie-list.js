@@ -3,32 +3,22 @@ numberOfPages = 0;
 numberOfRowPerPage = 10;
 curPage = 1;
 globalResultData = "";
-
+totalItemNum = 0;
 rowCache = new Map();
+itemCache = new Map();
 curIndexRow = 0;
 function initializePage(resultData) {
     globalResultData = resultData;
     numberOfRows = globalResultData.length;
     if (numberOfRows % numberOfRowPerPage == 0) numberOfPages = numberOfRows / numberOfRowPerPage;
     else numberOfPages = parseInt(numberOfRows / numberOfRowPerPage + 1);
-
-    let firstBtn = document.getElementById("spanFirst");
-    firstBtn.disabled = false;
-    let preBtn = document.getElementById("spanPre");
-    preBtn.disabled = false;
 }
 
-function spanFirstFunc() {
 
-}
 function spanPreFunc() {
-    let lastBtn = document.getElementById("spanLast");
-    lastBtn.disabled = false;
     let nextBtn = document.getElementById("spanNext");
     nextBtn.disabled = false;
     if (curPage === 2) {
-        let firstBtn = document.getElementById("spanFirst");
-        firstBtn.disabled = true;
         let preBtn = document.getElementById("spanPre");
         preBtn.disabled = true;
     }
@@ -40,13 +30,9 @@ function spanPreFunc() {
 }
 
 function spanNextFunc() {
-    let firstBtn = document.getElementById("spanFirst");
-    firstBtn.disabled = false;
     let preBtn = document.getElementById("spanPre");
     preBtn.disabled = false;
     if (curPage === numberOfPages - 1) {
-        let lastBtn = document.getElementById("spanLast");
-        lastBtn.disabled = true;
         let nextBtn = document.getElementById("spanNext");
         nextBtn.disabled = true;
     }
@@ -58,12 +44,6 @@ function spanNextFunc() {
     }
 }
 
-function spanLastFunc() {
-    let expectPage = numberOfPages;
-    createTable(globalResultData, expectPage);
-    let lastBtn = document.getElementById("spanLast");
-    lastBtn.disabled = true;
-}
 function searchMovie() {
     let body =  document.getElementById("movie-list-body");
     let titles = body.getElementsByTagName("h1");
@@ -111,7 +91,7 @@ function createTable(resultData, expectPage) {
             let movieId = resultData[i]['movie_id'];
             let rowHTML = "";
             rowHTML += "<div style='color: white'>";
-            rowHTML += "<div class='card bg-dark'>";
+            rowHTML += "<div class='card bg-dark' style='background-color: rgba(255, 255, 255, 0.6);'>";
             rowHTML += "<div class=\"card-header\">";
             rowHTML += '<h1><a ' +
                 'style="text-decoration: none; " ' +
@@ -149,8 +129,14 @@ function createTable(resultData, expectPage) {
             rowHTML += "</h4>" +
                 "</span>";
 
-            rowHTML += "<button id='btn_" + movieId + "' class=\"btn btn-primary\"" +
-                "onclick=showPopUpItem(this)  href=\"#\">Add To Cart</button>";
+            rowHTML +=
+                "<button id='btn_" + movieId + "' class=\"btn btn-outline-success\"" +
+                "onclick=addItem(this)  href=\"#\">" +
+                "<i class='fa fa-shopping-basket'></i>" +
+                "<span id='span_"+movieId+"' style=\"border-radius: 50%;  display: none;  height: 20px;    width: 20px; background: #f30303;  vertical-align: top;\">" +
+                "<span style=\"color: white;    height: 20px;    line-height: 20px;    text-align: center\"></span>" +
+                "</span>" +
+                "</button>";
             rowHTML += "</div>";
             rowHTML += "</div>";
             rowHTML += "<hr>";
@@ -167,20 +153,37 @@ function createTable(resultData, expectPage) {
     }
 }
 
-
-function showPopUpItem(title) {
+function showASWindow() {
+    console.log("hi");
+    $("#itemModal").modal({
+        keyboard: false
+    })
+}
+function addItem(title) {
     let btn_id = $(title).attr("id");
+    let movieId = btn_id.split("_")[1];
+    let spanId = "span_"+movieId;
     $.ajax({
-        url: "/backendCode/api/cart?id="+btn_id,
-        dataType: "json",
+        url: "/backendCode/api/cart?id=" + btn_id,
+        dataType: "text",
         method: "GET",
         success: () => {
-            alert("Succesfully add!")
+            totalItemNum++;
+            if (itemCache.has(spanId)) {
+                let quantity = itemCache.get(spanId);
+                itemCache.set(spanId, quantity + 1);
+            } else {
+                itemCache.set(spanId, 1);
+            }
+            document.getElementById(spanId).style.display = "block";
+            document.getElementById(spanId).innerText = itemCache.get(spanId);
+            document.getElementById("total_cart_num").innerText = totalItemNum;
         },
         error: (error) => {
             console.log(error);
         }
     });
+
 }
 function createGenres(resultData) {
     console.log("handleStarResult: populating genres table from resultData");

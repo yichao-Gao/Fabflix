@@ -8,14 +8,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "CartServlet", urlPatterns = {"/api/cart"})
-public class CartServlet extends HttpServlet {
+@WebServlet(name = "DeleteServlet", urlPatterns = {"/api/delete"})
+public class DeleteServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String movieId = request.getParameter("id");
-        movieId = movieId.split("_")[1];
         PrintWriter out = response.getWriter();
         try {
             if (request.getSession().getAttribute("user") != null) {
@@ -25,13 +24,7 @@ public class CartServlet extends HttpServlet {
                 System.out.println("the user hasn't been logged in!");
             }
             Cart cart = ((User) request.getSession().getAttribute("user")).getCart();
-            Cart.Node dfNode = new Cart.Node(1);
-            if(cart.movieQuantity.get(movieId)==null){
-                cart.movieQuantity.put(movieId, dfNode );}
-            else {
-                int qty = cart.movieQuantity.get(movieId).getQuantity();
-                cart.movieQuantity.get(movieId).setQuantity(qty+1);
-            }
+            cart.movieQuantity.remove(movieId);
             for (String key: cart.movieQuantity.keySet()) {
                 System.out.println(key + ":" + cart.movieQuantity.get(key));
             }

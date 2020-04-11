@@ -25,15 +25,15 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"/>
     <!-- hotkey plugin-->
 
-    <script src="js/jquery.hotkeys.js"></script>
+<!--    <script src="js/jquery.hotkeys.js"></script>-->
 
-    <script src="libs/builder/builder.js"></script>
-    <script src="libs/builder/undo.js"></script>
+<!--    <script src="libs/builder/builder.js"></script>-->
+<!--    <script src="libs/builder/undo.js"></script>-->
 
-    <script src="libs/builder/inputs.js"></script>
+<!--    <script src="libs/builder/inputs.js"></script>-->
 
-    <script src="libs/builder/components-bootstrap4.js"></script>
-    <script src="libs/builder/components-widgets.js"></script>
+<!--    <script src="libs/builder/components-bootstrap4.js"></script>-->
+<!--    <script src="libs/builder/components-widgets.js"></script>-->
 
 
     <!-- autocomplete plugin used by autocomplete input-->
@@ -44,11 +44,36 @@
             <strong>Fabflix</strong>
         </a>
 
-        <button>Proceed</button>
+        <button class="btn btn-success">Proceed</button>
     </div>
 </head>
-<body>
+<body style="background-color: black">
 <div id="cart-list-body" class="container sort-order-dots-container">
+    <h1><span style="color: red; ">Movie Cart</span></h1>
+    <table id="cart_table" class="table table-bordered" style="width: 975px;height: 45px; margin: 20px; color: #007bff;">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Opt</th>
+        </tr>
+        </thead>
+        <tbody id="cart_tbody">
+        </tbody>
+    </table>
+    <h3 >
+        <div class="row">
+
+            <div class="col-sm-10" style="text-align: right">
+                <label><span style="color: #007bff">Total Price:</span></label>
+                <div>
+                    <h1 id="total_price" style="color: #007bff;"></h1>
+                </div>
+            </div>
+        </div>
+    </h3>
 </div>
 <script src="js/cart.js"></script>
 </body>
