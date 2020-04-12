@@ -1,18 +1,5 @@
-cancheckout = false;
 
-function checkoutTotal() {
-    window.location.href="/backendCode/cart.html";
-    $.ajax({
-        url: "/backendCode/api/checkout",
-        dataType: "json",
-        type: "GET",
-        success: (resultData) => {
-            console.log("resultData");
-            createCart(resultData);
-        },
-        error: (error) => console.log(error)
-    });
-}
+
 
 function createCart(resultData) {
     let movieCartBodyElementId = document.getElementById("cart_tbody");
@@ -56,15 +43,15 @@ function total_price() {
     let total = document.getElementById("total_price");
     total.innerHTML="$"+ sum.toFixed(2);
 }
-function delete_item(i){
+function delete_item(i) {
     let tr = i.parentNode.parentNode;
     let tds = tr.getElementsByTagName("td");
     let movie_id = tds[0].innerHTML;
     $.ajax({
-        url: '/backendCode/api/delete?id='+movie_id,
-        cache:false,
+        url: '/backendCode/api/delete?id=' + movie_id,
+        cache: false,
         type: 'GET',
-        dataType: 'json',
+        dataType: 'text',
         success: () => {
             alert("Succesfully delete!")
         },
@@ -75,3 +62,13 @@ function delete_item(i){
     tr.parentNode.removeChild(tr);
     total_price();
 }
+
+    $.ajax({
+        url: "/backendCode/api/checkout",
+        dataType: "json",
+        type: "GET",
+        success: (resultData) => {
+            createCart(resultData);
+        },
+        error: (error) => console.log(error)
+    });
