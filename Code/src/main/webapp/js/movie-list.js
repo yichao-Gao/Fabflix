@@ -197,21 +197,21 @@ function showASWindow() {
         keyboard: false
     })
 }
-function addItem(title) {
-    let btn_id = $(title).attr("id");
-    $.ajax({
-        url: "/backendCode/api/cart?id=" + btn_id,
-        dataType: "text",
-        method: "GET",
-        success: () => {
-        },
-        error: (error) => {
-            console.log(error);
-        }
-    });
-    update_num();
-
-}
+// function addItem(title) {
+//     let btn_id = $(title).attr("id");
+//     $.ajax({
+//         url: "/backendCode/api/cart?id=" + btn_id,
+//         dataType: "text",
+//         method: "GET",
+//         success: () => {
+//         },
+//         error: (error) => {
+//             console.log(error);
+//         }
+//     });
+//     update_num();
+//
+// }
 function createGenres(resultData) {
     console.log("handleStarResult: populating genres table from resultData");
     let selectOptionBody = $("#genresProjectionDiv");
@@ -268,24 +268,3 @@ $.ajax({
     success: (resultData) => createGenres(resultData),
     error: (error) => {console.log(error)}
 });
-function update_num() {
-    $.ajax({
-        url: '/backendCode/api/checkout',
-        type: 'Get',
-        dataType: 'json',
-        success: (resultData) => {
-            let total_cart_num = document.getElementById("total_cart_num");
-            let sum = 0;
-            for (let i = 0; i < resultData.length; i++) {
-                sum += resultData[i]["quantity"];
-                let spanId = "span_"+resultData[i]["id"];
-                document.getElementById(spanId).style.display = "block";
-                document.getElementById(spanId).innerHTML=""+resultData[i]["quantity"];//update all cards
-            }
-            total_cart_num.innerHTML = "" + sum;//update total_cart_num
-        },
-        error: (error) => {
-            console.log(error)
-        }
-    });
-}
