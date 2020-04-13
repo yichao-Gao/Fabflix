@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a699acd0-44de-4cb3-9864-400e91b6393d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/src/main/java/DeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/java/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/java/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/CartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/java/CheckoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/CheckoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/movie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/movie-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +60,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Code" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -238,6 +232,7 @@
       <updated>1586313777323</updated>
       <workItem from="1586313781006" duration="4143000" />
       <workItem from="1586382311800" duration="24777000" />
+      <workItem from="1586731151800" duration="5136000" />
     </task>
     <servers />
   </component>
@@ -245,10 +240,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Project_Structure" timestamp="1586313927876">
+    <state x="552" y="178" key="#Project_Structure" timestamp="1586649121175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1586313927876" />
+    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1586649121175" />
     <state x="552" y="178" key="#Tomcat_Server" timestamp="1586313902302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -317,13 +312,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586313857796" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586384137194">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586731187592">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586384137194" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586411911948">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586731187592" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586668493698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586411911948" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586668493698" />
   </component>
 </project>

@@ -20,7 +20,7 @@ function createCart(resultData) {
             + resultData[i]["price"].toFixed(2)+
             "</td>";
         rowHTML += "<td>"
-        +"<button type='button' id='delete' class='btn btn-danger'  onclick='createDeleteWindow(this)'>delete</button>"
+        +"<button type='button' id='delete' class='btn btn-danger' style=\'width:100%\' onclick='createDeleteWindow(this)'>delete</button>"
             +"</td>";
         rowHTML += "</tr>";
 
