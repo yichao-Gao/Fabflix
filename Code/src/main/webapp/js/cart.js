@@ -1,33 +1,4 @@
 
-
-function createCart(resultData) {
-    let movieCartBodyElementId = document.getElementById("cart_tbody");
-    movieCartBodyElementId.innerHTML = "";
-    let movieCartBodyElement=jQuery("#cart_tbody");
-    // Iterate through resultData, no more than 10 entries
-    for (let i = 0; i <resultData.length; i++) {
-        let rowHTML="";
-        rowHTML += "<tr>";
-        rowHTML += "<td>"
-                    + resultData[i]["id"]+
-                    "</td>";
-        rowHTML += "<td>"
-                    + resultData[i]["title"]+
-                    "</td>";
-        rowHTML += "<td>"+"<input type='number' id='number' min='1' onkeydown='return false' oninput='total_price()' class='form-control' value="+resultData[i]['quantity']+" />"
-            +"</td>";
-        rowHTML += "<td>"
-            + resultData[i]["price"].toFixed(2)+
-            "</td>";
-        rowHTML += "<td>"
-        +"<button type='button' id='delete' class='btn btn-danger' style=\'width:100%\' onclick='createDeleteWindow(this)'>delete</button>"
-            +"</td>";
-        rowHTML += "</tr>";
-
-        movieCartBodyElement.append(rowHTML);
-    }
-    total_price();
-}
 function total_price() {
     let tbody = document.getElementById("cart_tbody");
     let trs = tbody.getElementsByTagName("tr");
@@ -79,6 +50,43 @@ function showDeleteWindow() {
     })
 
 }
+function addItem(title) {
+    let btn_id = $(title).attr("id");
+    console.log(btn_id);
+    $.ajax({
+        url: "/backendCode/api/cart?id=" + btn_id,
+        dataType: "text",
+        method: "GET",
+        success: () => {
+        },
+        error: (error) => {
+            console.log(error);
+        }
+    });
+    update_num();
+
+}
+function update_num() {
+    $.ajax({
+        url: '/backendCode/api/checkout',
+        type: 'Get',
+        dataType: 'json',
+        success: (resultData) => {
+            let total_cart_num = document.getElementById("total_cart_num");
+            let sum = 0;
+            for (let i = 0; i < resultData.length; i++) {
+                sum += resultData[i]["quantity"];
+                let spanId = "span_"+resultData[i]["id"];
+                document.getElementById(spanId).style.display = "block";
+                document.getElementById(spanId).innerHTML=""+resultData[i]["quantity"];//update all cards
+            }
+            total_cart_num.innerHTML = "" + sum;//update total_cart_num
+        },
+        error: (error) => {
+            console.log(error)
+        }
+    });
+}
 function delete_item(i) {
     let tr = i.parentNode.parentNode;
     let tds = tr.getElementsByTagName("td");
@@ -99,12 +107,3 @@ function delete_item(i) {
     total_price();
 }
 
-    $.ajax({
-        url: "/backendCode/api/checkout",
-        dataType: "json",
-        type: "GET",
-        success: (resultData) => {
-            createCart(resultData);
-        },
-        error: (error) => console.log(error)
-    });

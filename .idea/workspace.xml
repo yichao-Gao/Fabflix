@@ -7,12 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a699acd0-44de-4cb3-9864-400e91b6393d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/src/main/java/SignupServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/sign-up.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/src/main/webapp/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/java/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/movie-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/movie-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/single-movie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/single-star.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/single-star.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/movie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/movie-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/single-movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/single-movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/single-star.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/single-star.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +269,7 @@
       <workItem from="1586382311800" duration="24777000" />
       <workItem from="1586731151800" duration="5193000" />
       <workItem from="1586804828543" duration="19342000" />
-      <workItem from="1586883859129" duration="823000" />
+      <workItem from="1586883859129" duration="2019000" />
     </task>
     <servers />
   </component>
