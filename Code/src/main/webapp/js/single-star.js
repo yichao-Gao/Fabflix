@@ -65,9 +65,7 @@ function handleResult(resultData) {
         rowHTML+="</td>";
 
         rowHTML+="<td>";
-        rowHTML+='<a href="/backendCode/single-star.html?id=' + resultData[i]['star_id'] + '">'
-            + resultData[i]["movie_director"] +     // display star_name for the link text
-            '</a>';
+        rowHTML+= resultData[i]["movie_director"];     // display star_name for the link text
         rowHTML+="</td>";
 
         rowHTML+="<td>";

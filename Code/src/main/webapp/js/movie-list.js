@@ -36,12 +36,12 @@ function spanPreFunc() {
 function sortByTitle() {
     if (globalResultData == null) return err;
     if (sortByTitleCount % 2 === 0) {
-        globalResultData.sort(function (a, b) {
+        globalResultData = globalResultData.sort(function (a, b) {
             return b["movie_title"] - a["movie_title"]
         });
         sortByTitleCount++;
     } else {
-        globalResultData.sort(function (a, b) {
+        globalResultData = globalResultData.sort(function (a, b) {
             return a["movie_title"] - b["movie_title"]
         });
         sortByTitleCount--;

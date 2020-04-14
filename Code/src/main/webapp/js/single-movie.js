@@ -78,15 +78,9 @@ function handleResult(resultData) {
         rowHTML+="</td>";
 
         rowHTML+="<td>";
-        rowHTML+=
-            "<button id='btn_" + resultData[i]['movie_id'] + "' class=\"btn btn-outline-success\"" +
-            "onclick=addItem(this)>" +
-            "<i class='fa fa-shopping-cart'></i>" +
-            "</button>";
-        rowHTML += "<span id='span_"+resultData[i]['movie_id']+"' style=\"border-radius: 50%;  display: none;  height: 20px;    width: 20px; background: #f30303;  vertical-align: top;\">"+
-            "<span style=\"color: white;    height: 20px;    line-height: 20px;    text-align: center\"></span>" +
-            "</span>";
-
+        if (resultData[i]["star_dob"] === null) {
+            rowHTML += "<i class='fa fa-user-secret'></i>";
+        } else rowHTML += resultData[i]["star_dob"]
         rowHTML+="</td>";
 
         rowHTML+="</tr>";
