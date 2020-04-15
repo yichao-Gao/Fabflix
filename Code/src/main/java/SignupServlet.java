@@ -23,19 +23,17 @@ public class SignupServlet extends HttpServlet {
 
     private DataSource dataSource;
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setContentType("application/json");
 
-        // Retrieve parameter id from url request.
-        // Output stream to STDOUT
+
         PrintWriter out = response.getWriter();
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         try  {
 
-            String query = "INSERT INTO users VALUES(null,"+username+","+email+","+password+");";
+            String query = "INSERT INTO users VALUES(null,'"+username+"','"+email+"','"+password+"');";
             System.out.println(query);
             Connection connection = DBconnection.getDBconnection();
             // Declare our statement
@@ -43,7 +41,7 @@ public class SignupServlet extends HttpServlet {
 
 
             // Perform the query
-            statement.executeQuery();
+            statement.executeUpdate();
             // set response status to 200 (OK)
 
             response.setStatus(200);

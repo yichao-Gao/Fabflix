@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(filterName = "LoginFilter", urlPatterns = "/*")
+@WebFilter(filterName = "LoginFilter", urlPatterns = "/test/api")
 public class LoginFilter implements Filter {
 /**
      * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)

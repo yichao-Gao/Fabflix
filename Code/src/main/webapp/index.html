@@ -10,6 +10,7 @@
 
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css"type="text/css"/>
     <!-- include jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -31,7 +32,8 @@
 
     <script src="libs/builder/components-bootstrap4.js"></script>
     <script src="libs/builder/components-widgets.js"></script>
-
+    <script src="./bootstrapvalidator-master/dist/js/bootstrapValidator.min.js"></script>
+    <link href="./bootstrapvalidator-master/dist/css/bootstrapValidator.min.css" type="text/css"/>
 
     <!-- autocomplete plugin used by autocomplete input-->
     <script src="libs/autocomplete/jquery.autocomplete.js"></script>
@@ -55,14 +57,14 @@
         <div class="main">
             <div class="col-md-4  col-sm">
                 <div class="login-form">
-                    <form id="loginForm" action="form-recaptcha">
+                    <form id="loginForm" class="form" role="form" action="form-recaptcha">
                         <div class="form-group">
                             <label>User Name</label>
                             <input type="text" name="username" class="form-control" placeholder="User Name">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control" placeholder="User Name">
+                            <input type="text" name="email" class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <label>Password</label>

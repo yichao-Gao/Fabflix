@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * This class is declared as LoginServlet in web annotation, 
@@ -33,33 +36,25 @@ public class LoginServlet extends HttpServlet {
          * This example only allows username/password to be anteater/123456
          * In real world projects, you should talk to the database to verify username/password
          */
-        
-        try {
-            if (email.equals("mengz9@uci.edu") && password.equals("123456")) {
-                // Login succeeds
-                // Set this user into current session
-                System.out.println("Successfully log in !");
-                String sessionId = ((HttpServletRequest) request).getSession().getId();
-                Long lastAccessTime = ((HttpServletRequest) request).getSession().getLastAccessedTime();
-                request.getSession().setAttribute("user", new User(username, email, password));
-                JsonObject responseJsonObject = new JsonObject();
-                responseJsonObject.addProperty("status", "success");
-                responseJsonObject.addProperty("message", "success");
-                response.getWriter().write(responseJsonObject.toString());
-            } else {
-                // Login fails
-                JsonObject responseJsonObject = new JsonObject();
-                responseJsonObject.addProperty("status", "fail");
-                if (!username.equals("anteater")) {
-                    responseJsonObject.addProperty("message", "user " + username + " doesn't exist");
-                } else {
-                    responseJsonObject.addProperty("message", "incorrect password");
+
+            String query = "select * from users where userName='"+username+"' and email='"+email+"' and password='"+password+"';";
+            System.out.println(query);
+            try {
+                Connection connection = DBconnection.getDBconnection();
+                // Declare our statement
+                PreparedStatement statement = connection.prepareStatement(query);
+
+                ResultSet rs = statement.executeQuery();
+
+
+                if (rs.next()) {
+                    response.setStatus(200);
                 }
-                response.getWriter().write(responseJsonObject.toString());
-            }
-            response.setStatus(200);
-            // response.sendRedirect("backendCode/search.html");
-            response.getWriter().close();
+                else {
+                    response.setStatus(500);
+                }
+                statement.close();
+                rs.close();
             
         } catch (Exception e) {
             JsonObject jsonObject = new JsonObject();
