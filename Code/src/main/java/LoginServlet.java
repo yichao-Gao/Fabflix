@@ -48,6 +48,13 @@ public class LoginServlet extends HttpServlet {
 
 
                 if (rs.next()) {
+                    String sessionId = ((HttpServletRequest) request).getSession().getId();
+                    Long lastAccessTime = ((HttpServletRequest) request).getSession().getLastAccessedTime();
+                    request.getSession().setAttribute("user", new User(username, email, password));
+                    JsonObject responseJsonObject = new JsonObject();
+                    responseJsonObject.addProperty("status", "success");
+                    responseJsonObject.addProperty("message", "success");
+                    response.getWriter().write(responseJsonObject.toString());
                     response.setStatus(200);
                 }
                 else {
@@ -55,6 +62,7 @@ public class LoginServlet extends HttpServlet {
                 }
                 statement.close();
                 rs.close();
+                response.getWriter().close();
             
         } catch (Exception e) {
             JsonObject jsonObject = new JsonObject();

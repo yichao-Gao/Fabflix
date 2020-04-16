@@ -7,18 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a699acd0-44de-4cb3-9864-400e91b6393d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/java/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/java/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/movie-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/movie-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/single-movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/single-star.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/single-star.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/movie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/movie-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/single-movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/single-movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/single-star.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/single-star.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +260,8 @@
       <workItem from="1586382311800" duration="24777000" />
       <workItem from="1586731151800" duration="5193000" />
       <workItem from="1586804828543" duration="19342000" />
-      <workItem from="1586883859129" duration="2019000" />
+      <workItem from="1586883859129" duration="25306000" />
+      <workItem from="1587014132835" duration="1088000" />
     </task>
     <servers />
   </component>
@@ -353,13 +345,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586313857796" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586883863128">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587014136170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586883863128" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586841168837">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587014136170" />
+    <state x="1017" y="349" key="extract.method.dialog" timestamp="1586905876708">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586841168837" />
+    <state x="1017" y="349" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586905876708" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586904023847">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586904023847" />
   </component>
 </project>
