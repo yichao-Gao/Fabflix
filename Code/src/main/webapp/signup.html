@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Album example for Bootstrap</title>
-    <link href="./css/movie-list.css"type="text/css"/>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -21,29 +21,16 @@
 
     <script src="./bootstrapvalidator-master/dist/js/bootstrapValidator.min.js"></script>
     <link href="./bootstrapvalidator-master/dist/css/bootstrapValidator.min.css" type="text/css"/>
-    <!-- include jQuery-->
-
-    <!-- autocomplete plugin used by autocomplete input-->
-    <nav class="navbar navbar-light " style="text-align: left">
-        <div class="container d-flex justify-content-between">
-            <a href="/backendCode/movie-list.html" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" color="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                <strong style="color: white">Fabflix</strong>
-            </a>
-
-        </div>
-    </nav>
 </head>
-<body style="background: black url('./materials/poster1.jpg') center 0 no-repeat fixed; background-size: 1600px 1200px;">
-
+<body style="background-color: black">
         <div class="container">
 
             <div class="row" style="margin-top: 10%;">
-                <div class="col-sm-4"></div>
-                <div class="sign-up-form">
-                    <form id="signupForm" class="form" role="form" style="padding: 30px 100px 10px; background-color: rgba(90,90,90,0.5);color: white;">
+                <div class="col-sm"></div>
+                <div class="col-sm">
+                    <form id="signupForm" class="form" role="form" style="padding: 30px 100px 10px; background-color: rgba(90,90,90,0.5);">
                     <fieldset>
-                        <legend><h1><b>Sign up</b></h1></legend>
+                        <legend style="color: white;"><h1><b>Sign up</b></h1></legend>
                     </fieldset>
                         <div class="form-group">
                             <label for="username" class=control-label">User Name</label>
@@ -63,15 +50,17 @@
                                 <input type="text" id="password" name="password" class="form-control" placeholder="6-18 a-Z,0-9 and _">
                             </div>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6LfZ9ucUAAAAAJ2WQjUn3vy6jmnrX11CNeL6BObp"></div>
                         <div class="form-group" style="text-align: center">
                             <div>
-                                <button type="submit" class="btn-success" style="width: 40%;">Sign Up</button>
+                                <button type="submit" class="btn btn-outline-light" style="width: 40%;">Sign Up</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <div class="col-sm"></div>
             </div>
-            <div class="col-sm-4"></div>
+
         </div>
          <script type="text/javascript" src="js/sign-up.js"></script>
 </body>

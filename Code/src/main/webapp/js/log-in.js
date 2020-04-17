@@ -8,34 +8,6 @@ $(function(){
             validating: 'glyphicon glyphicon-refresh'
         },
         fields:{
-            username:{
-                message: 'Username Validation Fail',
-                validators:{
-                    notEmpty:{
-                        message:'Username cannot be empty!'
-                    },
-                    stringLength: {
-                        min:6,
-                        max:18,
-                        message:'Username length must be between 6-18!'
-                    },
-                    remote:{//ajax validation.
-                        // server result:{"valid",true or false}
-                        url:"/backendCode/api/UserCheck",
-                        message:'Username not exists',
-                        delay:1000,//refresh 1s
-                        type:'POST',
-                        data: {
-                            username: function () {
-                                return {
-                                    username: $('input[name="username"]').val(),
-                                };
-                            },
-                            method: "searchUserName"//UserCheckServlet method searchUserName
-                        }
-                    }
-                }
-            },
             email:{
                 validators:{
                     notEmpty: {
@@ -66,7 +38,6 @@ $(function(){
 
         }
     }).on("success.form.bv",function(e) {
-        console.log("hi");
         e.preventDefault(); // avoid to execute the actual submit of the form.
 
         const form = $(this);
@@ -78,13 +49,13 @@ $(function(){
             success: (data) =>
             {
                 console.log(data);
-                alert("Successfully log in!")
+                // alert("Successfully log in!")
                 window.location.href="/backendCode/movie-list.html";
             },
             error: (error) => {
                 console.log(error);
-                alert("Password Wrong!")
-                window.location.href="/backendCode/index.html";
+                // alert("Password Wrong!")
+                // window.location.href="/backendCode/index.html";
             }
         });
 

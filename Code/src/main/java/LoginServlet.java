@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
          * In real world projects, you should talk to the database to verify username/password
          */
 
-            String query = "select * from users where userName='"+username+"' and email='"+email+"' and password='"+password+"';";
+            String query = "select * from users where email='"+email+"' and password='"+password+"';";
             System.out.println(query);
             try {
                 Connection connection = DBconnection.getDBconnection();
@@ -45,8 +45,6 @@ public class LoginServlet extends HttpServlet {
                 PreparedStatement statement = connection.prepareStatement(query);
 
                 ResultSet rs = statement.executeQuery();
-
-
                 if (rs.next()) {
                     String sessionId = ((HttpServletRequest) request).getSession().getId();
                     Long lastAccessTime = ((HttpServletRequest) request).getSession().getLastAccessedTime();
