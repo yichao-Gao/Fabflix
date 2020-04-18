@@ -8,8 +8,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a699acd0-44de-4cb3-9864-400e91b6393d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/src/main/java/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/java/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/SignupServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/java/UserCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/java/UserCheckServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/log-in.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/log-in.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/js/sign-up.js" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/js/sign-up.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/main/webapp/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/main/webapp/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +268,8 @@
       <workItem from="1586731151800" duration="5193000" />
       <workItem from="1586804828543" duration="19342000" />
       <workItem from="1586883859129" duration="25306000" />
-      <workItem from="1587014132835" duration="1088000" />
+      <workItem from="1587014132835" duration="1203000" />
+      <workItem from="1587165828588" duration="12183000" />
     </task>
     <servers />
   </component>
@@ -281,10 +289,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1586313902302" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586847996247">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587193287478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586847996247" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587193287478" />
     <state x="740" y="209" key="FileChooserDialogImpl" timestamp="1586313844157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -345,10 +353,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586313857796" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587014136170">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587165928807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587014136170" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587165928807" />
     <state x="1017" y="349" key="extract.method.dialog" timestamp="1586905876708">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

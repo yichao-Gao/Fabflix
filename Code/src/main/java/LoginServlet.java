@@ -28,7 +28,6 @@ public class LoginServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -37,7 +36,7 @@ public class LoginServlet extends HttpServlet {
          * In real world projects, you should talk to the database to verify username/password
          */
 
-            String query = "select * from users where email='"+email+"' and password='"+password+"';";
+            String query = "select * from customers where email='"+email+"' and password='"+password+"';";
             System.out.println(query);
             try {
                 Connection connection = DBconnection.getDBconnection();
@@ -48,7 +47,7 @@ public class LoginServlet extends HttpServlet {
                 if (rs.next()) {
                     String sessionId = ((HttpServletRequest) request).getSession().getId();
                     Long lastAccessTime = ((HttpServletRequest) request).getSession().getLastAccessedTime();
-                    request.getSession().setAttribute("user", new User(username, email, password));
+                    request.getSession().setAttribute("user", new User(email, password));
                     JsonObject responseJsonObject = new JsonObject();
                     responseJsonObject.addProperty("status", "success");
                     responseJsonObject.addProperty("message", "success");

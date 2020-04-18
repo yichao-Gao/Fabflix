@@ -20,23 +20,20 @@ public class UserCheckServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
         String method=request.getParameter("method");
         System.out.println(method);
-        if("checkUserName".equals(method)){
-            checkUserName(request,response);
+        if("checkCredit".equals(method)){
+            checkCredit(request,response);
         }
         if("checkEmail".equals(method)){
             checkEmail(request,response);
         }
-        if("searchUserName".equals(method)){
-            searchUserName(request,response);
+        if("searchEmail".equals(method)){
+            searchEmail(request,response);
         }
     }
-    protected void checkUserName(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
-        /**
-         * Get the list of genres to the selector in the movie-list.html
-         */
+    protected void checkCredit(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
         String jsonResult="";
-        String username=request.getParameter("username");
-        String query = "select * from users where userName='"+username+"';";
+        String ccid=request.getParameter("ccid");
+        String query = "select * from creditcards where id='"+ccid+"';";
         System.out.println(query);
         try {
             Connection connection = DBconnection.getDBconnection();
@@ -45,12 +42,11 @@ public class UserCheckServlet extends HttpServlet {
 
             ResultSet rs = statement.executeQuery();
 
-
-                if (rs.next()) {
-                    jsonResult = "{\"valid\":false}";
-                } else {
-                    jsonResult = "{\"valid\":true}";
-                }
+            if (rs.next()) {
+                jsonResult = "{\"valid\":false}";
+            } else {
+                jsonResult = "{\"valid\":true}";
+            }
 
             response.setStatus(200);
             response.getWriter().write(jsonResult);
@@ -64,13 +60,11 @@ public class UserCheckServlet extends HttpServlet {
             response.setStatus(500);
         }
     }
+
     protected void checkEmail(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
-        /**
-         * Get the list of genres to the selector in the movie-list.html
-         */
         String jsonResult="";
         String email=request.getParameter("email");
-        String query = "select * from users where email='"+email+"';";
+        String query = "select * from customers where email='"+email+"';";
         System.out.println(query);
         try {
             Connection connection = DBconnection.getDBconnection();
@@ -97,13 +91,10 @@ public class UserCheckServlet extends HttpServlet {
             response.setStatus(500);
         }
     }
-    protected void searchUserName(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
-        /**
-         * Get the list of genres to the selector in the movie-list.html
-         */
+    protected void searchEmail(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
         String jsonResult="";
-        String username=request.getParameter("username");
-        String query = "select * from users where userName='"+username+"';";
+        String email=request.getParameter("email");
+        String query = "select * from customers where email='"+email+"';";
         System.out.println(query);
         try {
             Connection connection = DBconnection.getDBconnection();

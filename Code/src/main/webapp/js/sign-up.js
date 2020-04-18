@@ -8,32 +8,46 @@ $(function(){
                         validating: 'glyphicon glyphicon-refresh'
         },
         fields:{
-            username:{
-                message: 'Username Validation Fail',
+            firstname:{
                 validators:{
                     notEmpty:{
-                        message:'Username cannot be empty!'
-                    },
-                    stringLength: {
-                        min:6,
-                        max:18,
-                        message:'Username length must be between 6-18!'
+                        message:'FirstName cannot be empty!'
+                    }
+                }
+            },
+            lastname:{
+                validators:{
+                    notEmpty:{
+                        message:'LastNmae cannot be empty!'
+                    }
+                }
+            },
+            ccid:{
+                validators:{
+                    notEmpty:{
+                        message:'CCid cannot be empty!'
                     },
                     threshold:2, //send ajax request when length >2
-                    remote:{//ajax validation.
-                        // server result:{"valid",true or false}
+                    remote:{//ajax validation. server result:{"valid",true or false}
                         url:"/backendCode/api/UserCheck",
-                        message:'Username exists, type again',
+                        message:'CreditCard used, type again',
                         delay:1000,//refresh 1s
                         type:'POST',
                         data: {
-                            username: function () {
+                            email: function() {
                                 return {
-                                    username: $('input[name="username"]').val(),
+                                    email: $('input[name="ccid"]').val(),
                                 };
                             },
-                            method: "checkUserName"//UserCheckServlet method checkUserName
+                            method: "checkCredit"//UserCheckServlet method checkCredit
                         }
+                    }
+                }
+            },
+            address:{
+                validators:{
+                    notEmpty:{
+                        message:'Address cannot be empty!'
                     }
                 }
             },
@@ -69,9 +83,9 @@ $(function(){
                         message:'Password cannot be empty!'
                     },
                     stringLength:{
-                        min:6,
+                        min:2,
                         max:18,
-                        message:'Password Length must be between 6-18!'
+                        message:'Password Length must be between 2-18!'
                     },
                     regexp:{
                         regexp: /^[a-zA-Z0-9_]+$/,

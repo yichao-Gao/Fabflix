@@ -15,6 +15,20 @@ $(function(){
                     },
                     emailAddress:{
                         message:'Wrong Email Syntax!'
+                    },
+                    remote:{//ajax validation. server result:{"valid",true or false}
+                        url:"/backendCode/api/UserCheck",
+                        message:'Email not exists, type again',
+                        delay:1000,//refresh 1s
+                        type:'POST',
+                        data: {
+                            email: function() {
+                                return {
+                                    email: $('input[name="email"]').val(),
+                                };
+                            },
+                            method: "searchEmail"//UserCheckServlet method searchEmail
+                        }
                     }
                 }
             },
@@ -25,9 +39,9 @@ $(function(){
                         message:'Password cannot be empty!'
                     },
                     stringLength:{
-                        min:6,
+                        min:2,
                         max:18,
-                        message:'Password Length must be between 6-18!'
+                        message:'Password Length must be between 2-18!'
                     },
                     regexp:{
                         regexp: /^[a-zA-Z0-9_]+$/,

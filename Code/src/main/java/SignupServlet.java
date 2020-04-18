@@ -28,12 +28,15 @@ public class SignupServlet extends HttpServlet {
 
 
         PrintWriter out = response.getWriter();
-        String username = request.getParameter("username");
+        String lastname = request.getParameter("lastname");
+        String firstname = request.getParameter("firstname");
+        String address = request.getParameter("address");
+        String ccid = request.getParameter("ccid");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         try  {
 
-            String query = "INSERT INTO users VALUES(null,'"+username+"','"+email+"','"+password+"');";
+            String query = "INSERT INTO creditcards VALUES('"+ccid+"','"+firstname+"','"+lastname+"','2020/09/01');";
             System.out.println(query);
             Connection connection = DBconnection.getDBconnection();
             // Declare our statement
@@ -41,8 +44,11 @@ public class SignupServlet extends HttpServlet {
 
 
             // Perform the query
-            statement.executeUpdate();
+            statement.executeUpdate(query);
             // set response status to 200 (OK)
+            query="INSERT INTO customers VALUES(null,'"+firstname+"','"+lastname+"','"+ccid+"','"+address+"','"+email+"','"+password+"');";
+            System.out.println(query);
+            statement.executeUpdate(query);
 
             response.setStatus(200);
             out.close();
